@@ -1,2 +1,3 @@
 # fortune
 # fortune
+# mbti
