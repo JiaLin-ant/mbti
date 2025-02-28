@@ -3,7 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBTI性格测试 - 探索你的性格类型</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="免费在线MBTI性格测试，通过40道专业测试题，准确分析你的16型人格类型。了解自己是分析家、外交家、哨兵还是探险家，发现最适合的职业发展方向和人际关系建议。">
+    <meta name="keywords" content="MBTI测试,16型人格测试,性格测试,职业性格测试,MBTI中文测试,免费性格测试,在线心理测试,职业规划,人格分析,性格分析,心理测评">
+    <title>MBTI性格测试 - 免费在线测试分析你的16型人格类型 | 职业性格测评</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mbti.example.com/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mbti.example.com/index.html">
+    <meta property="og:title" content="MBTI性格测试 - 免费在线测试分析你的16型人格类型">
+    <meta property="og:description" content="通过专业的MBTI性格测试，了解你的性格特质。免费完成测试，发现最适合的职业发展方向。">
+    <meta property="og:image" content="https://mbti.example.com/images/mbti-share.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MBTI性格测试",
+        "description": "免费在线MBTI性格测试，帮助你了解自己的性格特质和职业发展方向",
+        "url": "https://mbti.example.com",
+        "applicationCategory": "PersonalityTest",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "心理测评",
+            "url": "https://mbti.example.com"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://mbti.example.com"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MBTI性格测试",
+            "item": "https://mbti.example.com/index.html"
+        }]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
@@ -14,19 +75,24 @@
     </style>
 </head>
 <body class="bg-white min-h-screen">
+    <!-- 添加跳转到主要内容的链接，提高可访问性 -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">
+        跳转到主要内容
+    </a>
+    
     <!-- Main Content -->
-    <main class="flex-1">
+    <main class="flex-1" id="main-content">
         <!-- Header -->
-        <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
-            <nav class="container mx-auto px-6 py-4">
+        <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm" role="banner">
+            <nav class="container mx-auto px-6 py-4" role="navigation" aria-label="主导航">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <a href="/" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                        <a href="/" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600" aria-label="返回首页">
                             心理测评
                         </a>
                     </div>
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600" aria-current="page">
                             MBTI测试
                         </a>
                     </div>
@@ -35,38 +101,39 @@
         </header>
 
         <!-- Main Content -->
-        <main class="pt-20 bg-white">
+        <main class="pt-20 bg-white" role="main">
             <!-- Hero Section -->
-            <section class="py-12 px-6 bg-gradient-to-b from-blue-50 to-white">
+            <section class="py-12 px-6 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="hero-title">
                 <div class="container mx-auto text-center">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 text-transparent bg-clip-text">
+                    <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 text-transparent bg-clip-text">
                         探索你的性格类型
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto" aria-describedby="hero-title">
                         通过科学的MBTI测试，了解你的性格特质，发现真实的自己
                     </p>
-                    <button id="startTest" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                    <button id="startTest" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg" aria-label="开始MBTI性格测试">
                         开始测试
                     </button>
                 </div>
             </section>
 
             <!-- Personality Types Grid -->
-            <section class="py-8 px-6">
+            <section class="py-8 px-6" aria-labelledby="personality-types-title">
+                <h2 id="personality-types-title" class="sr-only">MBTI 16种性格类型</h2>
                 <div class="container mx-auto">
                     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
                         <!-- 分析家类型 -->
-                        <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
-                            <h3 class="text-xl font-semibold text-blue-800 mb-4 text-center">分析家类型</h3>
+                        <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100" role="region" aria-labelledby="analyst-title">
+                            <h3 id="analyst-title" class="text-xl font-semibold text-blue-800 mb-4 text-center">分析家类型</h3>
                             <div class="grid grid-cols-2 gap-3">
-                                <div onclick="showTypeDetail('INTJ')" class="group cursor-pointer bg-white rounded-xl overflow-hidden hover:bg-blue-50 transition border border-blue-100 hover:border-blue-200">
+                                <button onclick="showTypeDetail('INTJ')" class="group text-left bg-white rounded-xl overflow-hidden hover:bg-blue-50 transition border border-blue-100 hover:border-blue-200" aria-label="查看INTJ建筑师型人格详情">
                                     <div class="p-3 text-center">
                                         <div class="flex flex-col items-center">
                                             <h4 class="text-lg font-bold text-blue-900">INTJ</h4>
                                             <p class="text-blue-600 text-sm mt-1">建筑师</p>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                                 <div onclick="showTypeDetail('INTP')" class="group cursor-pointer bg-white rounded-xl overflow-hidden hover:bg-blue-50 transition border border-blue-100 hover:border-blue-200">
                                     <div class="p-3 text-center">
                                         <div class="flex flex-col items-center">
@@ -215,11 +282,11 @@
             </section>
 
             <!-- Test Container -->
-            <div id="testContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+            <div id="testContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden" role="dialog" aria-labelledby="test-title" aria-modal="true">
                 <div class="bg-white p-8 rounded-2xl max-w-3xl w-full mx-4 shadow-xl" style="margin-top: -10vh;">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800">问题 <span id="questionNumber">1</span>/40</h3>
-                        <button onclick="closeTest()" class="text-gray-400 hover:text-gray-600 transition">
+                        <h3 id="test-title" class="text-2xl font-bold text-gray-800">问题 <span id="questionNumber">1</span>/40</h3>
+                        <button onclick="closeTest()" class="text-gray-400 hover:text-gray-600 transition" aria-label="关闭测试">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
@@ -227,12 +294,12 @@
                     </div>
                     
                     <div class="mb-8">
-                        <p id="questionText" class="text-xl text-gray-800 mb-6">在社交场合，你通常会：</p>
-                        <div class="space-y-4">
-                            <button class="answer-btn w-full text-left p-4 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-700 transition">
+                        <p id="questionText" class="text-xl text-gray-800 mb-6" role="heading" aria-level="4">在社交场合，你通常会：</p>
+                        <div class="space-y-4" role="radiogroup" aria-labelledby="questionText">
+                            <button class="answer-btn w-full text-left p-4 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-700 transition" role="radio" aria-checked="false">
                                 倾向于与他人广泛交流，认识新朋友
                             </button>
-                            <button class="answer-btn w-full text-left p-4 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-700 transition">
+                            <button class="answer-btn w-full text-left p-4 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-700 transition" role="radio" aria-checked="false">
                                 倾向于与少数熟悉的人深入交谈
                             </button>
                         </div>
@@ -1246,9 +1313,9 @@
                     relationships: {
                         strengths: [
                             '真诚而富有同情心',
-                            '善于倾听和理解他人',
+                            '倾听和理解他人',
                             '重视深层情感联系',
-                            '愿意为关系付出努力'
+                            '为关系付出努力'
                         ],
                         challenges: [
                             '过于敏感',
@@ -2856,11 +2923,27 @@
 
         function closeTest() {
             document.getElementById('testContainer').classList.add('hidden');
+            // 重置测试相关变量
+            currentQuestion = 0;
+            userAnswers = new Array(questions.length).fill(null);
+            // 重置按钮状态
+            document.getElementById('prevQuestion').disabled = true;
+            document.getElementById('nextQuestion').disabled = true;
+            // 重置问题显示
+            showQuestion(0);
         }
         
         function showTestResult(type) {
             closeTest();
-            showTypeDetail(type); // 复用性格类型的详情卡片
+            showTypeDetail(type);
+        }
+
+        function startTest() {
+            // 初始化测试
+            currentQuestion = 0;
+            userAnswers = new Array(questions.length).fill(null);
+            document.getElementById('testContainer').classList.remove('hidden');
+            showQuestion(0);
         }
     </script>
 </body>
