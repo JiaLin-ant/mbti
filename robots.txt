@@ -8,7 +8,7 @@ Allow: /
 # Disallow: /admin/
 
 # Sitemap 位置
-Sitemap: https://mbti.example.com/sitemap.xml
+Sitemap: https://mbtitests.com/sitemap.xml
 
 # 爬虫抓取延迟（可选）
 Crawl-delay: 10 
