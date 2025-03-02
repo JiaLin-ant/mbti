@@ -2,6 +2,7 @@
 # 允许所有搜索引擎爬虫访问
 User-agent: *
 Allow: /
+Allow: /love-match/
 
 # 不允许爬虫访问的目录（如果有的话）
 # Disallow: /private/
