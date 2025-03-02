@@ -1,21 +1,27 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
+  "headers": [
     {
-      "src": "/sitemap.xml",
-      "headers": {
-        "Content-Type": "application/xml"
-      },
-      "continue": true
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        }
+      ]
     },
     {
-      "src": "/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain"
-      },
-      "continue": true
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
     }
+  ],
+  "rewrites": [
+    { "source": "/love-match", "destination": "/love-match/index.html" }
   ]
-} 
+}
