@@ -13,4 +13,11 @@
  <changefreq>weekly</changefreq>
 </url>
 
+<url>
+ <loc>https://www.mbtitests.com/love-match/</loc>
+ <priority>0.9</priority>
+ <lastmod>2023-08-01</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
 </urlset>
