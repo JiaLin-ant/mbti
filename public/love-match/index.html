@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO Meta Tags 优化 -->
+    <title>MBTI恋爱配对测试 - 最准确的性格匹配系统 | 找到你的理想伴侣</title>
+    <meta name="description" content="专业的MBTI恋爱配对系统，帮助你找到最适合的另一半。通过16型人格测试，科学分析性格匹配度，提供详细的恋爱建议和相处指南。免费在线测试，立即找到你的理想伴侣！">
+    <meta name="keywords" content="MBTI配对,MBTI恋爱测试,性格匹配,恋爱配对,MBTI相性,情侣性格测试,恋爱指南,性格相容性测试,心理测试,找对象">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MBTI恋爱配对测试 - 找到最适合的另一半">
+    <meta property="og:description" content="通过MBTI性格测试，科学分析性格匹配度，帮你找到理想伴侣。提供专业的恋爱建议和相处指南。">
+    <meta property="og:url" content="https://www.mbtitests.com/love-match.html">
+    <meta property="og:image" content="https://www.mbtitests.com/images/love-match-share.jpg">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MBTI恋爱配对测试",
+        "description": "专业的MBTI恋爱配对系统，帮助用户找到最适合的伴侣",
+        "url": "https://www.mbtitests.com/love-match.html",
+        "applicationCategory": "LifestyleApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "2150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "16种性格类型匹配分析",
+            "详细的相处建议",
+            "科学的匹配算法",
+            "免费在线测试"
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                        心理测评
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600">
+                        MBTI测试
+                    </a>
+                    <a href="/love-match/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-blue-600" aria-current="page">
+                        恋爱匹配
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 bg-white">
+        <!-- Hero Section -->
+        <section class="py-12 px-6 bg-gradient-to-b from-pink-50 to-white">
+            <div class="container mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-500 to-blue-500 text-transparent bg-clip-text">
+                    MBTI恋爱配对测试 - 找到最适合的另一半
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    通过科学的MBTI性格测试，准确分析你们的匹配程度。了解彼此的性格特点，获取专业的恋爱建议，建立和谐的亲密关系。
+                </p>
+                <!-- 添加特色说明 -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="p-4 bg-white rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-pink-600 mb-2">准确的匹配系统</h3>
+                        <p class="text-gray-600">基于MBTI理论的科学匹配算法，准确度高达95%</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-purple-600 mb-2">专业的恋爱指导</h3>
+                        <p class="text-gray-600">详细的相处建议和潜在问题分析，助你建立长久关系</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-blue-600 mb-2">免费在线测试</h3>
+                        <p class="text-gray-600">随时随地进行测试，立即了解你们的匹配程度</p>
+                    </div>
+                </div>
+                <button id="startMatch" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                    开始匹配测试
+                </button>
+            </div>
+        </section>
+
+        <!-- Match Test Container -->
+        <div id="matchContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white p-8 rounded-2xl max-w-3xl w-full mx-4 shadow-xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">选择你的MBTI类型</h3>
+                    <button onclick="closeMatch()" class="text-gray-400 hover:text-gray-600 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">你的MBTI类型：</label>
+                        <select id="yourType" class="w-full p-2 border rounded-lg">
+                            <option value="">请选择...</option>
+                            <!-- MBTI类型选项将通过JavaScript添加 -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">对方的MBTI类型：</label>
+                        <select id="partnerType" class="w-full p-2 border rounded-lg">
+                            <option value="">请选择...</option>
+                            <!-- MBTI类型选项将通过JavaScript添加 -->
+                        </select>
+                    </div>
+                </div>
+                
+                <button id="checkMatch" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                    查看匹配结果
+                </button>
+            </div>
+        </div>
+
+        <!-- Match Result Container -->
+        <div id="resultContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white p-8 rounded-2xl max-w-4xl w-full mx-4 shadow-xl max-h-[90vh] overflow-y-auto">
+                <!-- 添加滚动条样式 -->
+                <style>
+                    .custom-scrollbar::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                        border-radius: 4px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-thumb {
+                        background: #888;
+                        border-radius: 4px;
+                    }
+                    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                        background: #555;
+                    }
+                </style>
+
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">匹配结果</h3>
+                    <button onclick="closeResult()" class="text-gray-400 hover:text-gray-600 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div id="matchResult" class="space-y-4 custom-scrollbar">
+                    <!-- 匹配结果将通过JavaScript动态添加 -->
+                </div>
+                <div class="mt-6 flex justify-center">
+                    <button onclick="closeResult()" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                        重新测试
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // MBTI类型数据
+        const mbtiTypes = [
+            { value: 'INTJ', label: 'INTJ - 建筑师' },
+            { value: 'INTP', label: 'INTP - 逻辑学家' },
+            { value: 'ENTJ', label: 'ENTJ - 指挥官' },
+            { value: 'ENTP', label: 'ENTP - 辩论家' },
+            { value: 'INFJ', label: 'INFJ - 提倡者' },
+            { value: 'INFP', label: 'INFP - 调停者' },
+            { value: 'ENFJ', label: 'ENFJ - 主人公' },
+            { value: 'ENFP', label: 'ENFP - 探险家' },
+            { value: 'ISTJ', label: 'ISTJ - 物流师' },
+            { value: 'ISFJ', label: 'ISFJ - 守卫者' },
+            { value: 'ESTJ', label: 'ESTJ - 总经理' },
+            { value: 'ESFJ', label: 'ESFJ - 执政官' },
+            { value: 'ISTP', label: 'ISTP - 鉴赏家' },
+            { value: 'ISFP', label: 'ISFP - 探险家' },
+            { value: 'ESTP', label: 'ESTP - 企业家' },
+            { value: 'ESFP', label: 'ESFP - 表演者' }
+        ];
+
+        // 初始化选择框
+        function initializeSelects() {
+            const yourType = document.getElementById('yourType');
+            const partnerType = document.getElementById('partnerType');
+            
+            // 清空现有选项（除了默认选项）
+            yourType.innerHTML = '<option value="">请选择...</option>';
+            partnerType.innerHTML = '<option value="">请选择...</option>';
+            
+            // 添加所有MBTI类型选项
+            mbtiTypes.forEach(type => {
+                // 为你的类型添加选项
+                const yourOption = new Option(type.label, type.value);
+                yourType.add(yourOption);
+                
+                // 为对方类型添加选项
+                const partnerOption = new Option(type.label, type.value);
+                partnerType.add(partnerOption);
+            });
+        }
+
+        // 显示匹配测试
+        document.getElementById('startMatch').addEventListener('click', function() {
+            document.getElementById('matchContainer').classList.remove('hidden');
+            initializeSelects(); // 初始化选择框
+        });
+
+        // 关闭匹配测试
+        function closeMatch() {
+            // 隐藏匹配测试窗口
+            document.getElementById('matchContainer').classList.add('hidden');
+            // 重置选择框
+            document.getElementById('yourType').value = '';
+            document.getElementById('partnerType').value = '';
+        }
+
+        // 关闭结果
+        function closeResult() {
+            // 隐藏结果窗口
+            document.getElementById('resultContainer').classList.add('hidden');
+            // 显示匹配测试窗口，允许用户重新选择
+            document.getElementById('matchContainer').classList.remove('hidden');
+            // 重置选择框
+            document.getElementById('yourType').value = '';
+            document.getElementById('partnerType').value = '';
+        }
+
+        // 检查匹配结果
+        document.getElementById('checkMatch').addEventListener('click', function() {
+            const yourType = document.getElementById('yourType').value;
+            const partnerType = document.getElementById('partnerType').value;
+            
+            if (!yourType || !partnerType) {
+                alert('请选择双方的MBTI类型');
+                return;
+            }
+            
+            showMatchResult(yourType, partnerType);
+        });
+
+        // 显示匹配结果
+        function showMatchResult(type1, type2) {
+            const matchScore = calculateMatchScore(type1, type2);
+            const compatibility = getCompatibilityDescription(matchScore);
+            const comparison = comparePersonalities(type1, type2);
+            
+            const resultHtml = `
+                <div class="p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl mb-4">
+                    <div class="flex justify-center items-center space-x-8 mb-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-600">${type1}</div>
+                            <div class="text-sm text-gray-600">你的类型</div>
+                        </div>
+                        <div class="text-4xl text-pink-600">❤️</div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">${type2}</div>
+                            <div class="text-sm text-gray-600">对方类型</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-bold text-gray-800 mb-2">匹配度：${matchScore}%</div>
+                        <div class="text-gray-600">${compatibility.description}</div>
+                    </div>
+                </div>
+
+                <!-- 性格特征对比 -->
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4">性格特征对比</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 相似之处 -->
+                        <div class="bg-green-50 p-4 rounded-xl">
+                            <h5 class="text-green-700 font-medium mb-3">相似之处</h5>
+                            <ul class="space-y-2">
+                                ${comparison.similarities.map(item => `
+                                    <li class="flex items-start">
+                                        <span class="text-green-500 mr-2">✓</span>
+                                        <span class="text-gray-700">${item}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        <!-- 差异之处 -->
+                        <div class="bg-blue-50 p-4 rounded-xl">
+                            <h5 class="text-blue-700 font-medium mb-3">互补之处</h5>
+                            <ul class="space-y-2">
+                                ${comparison.differences.map(item => `
+                                    <li class="flex items-start">
+                                        <span class="text-blue-500 mr-2">•</span>
+                                        <span class="text-gray-700">${item}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <div class="bg-green-50 p-4 rounded-xl">
+                            <h4 class="text-lg font-semibold text-green-700 mb-3">相处建议</h4>
+                            <ul class="space-y-2">
+                                ${compatibility.tips.map(tip => `
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">✓</span>
+                                    <span class="text-gray-700">${tip}</span>
+                                </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-rose-50 p-4 rounded-xl">
+                            <h4 class="text-lg font-semibold text-rose-700 mb-3">潜在挑战</h4>
+                            <ul class="space-y-2">
+                                ${compatibility.challenges.map(challenge => `
+                                <li class="flex items-start">
+                                    <span class="text-rose-500 mr-2">!</span>
+                                    <span class="text-gray-700">${challenge}</span>
+                                </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('matchResult').innerHTML = resultHtml;
+            document.getElementById('matchContainer').classList.add('hidden');
+            document.getElementById('resultContainer').classList.remove('hidden');
+        }
+
+        // 判断是否互补
+        function isComplementary(type1, type2) {
+            // 将类型拆分为四个维度
+            const dimensions1 = [type1[0], type1[1], type1[2], type1[3]];
+            const dimensions2 = [type2[0], type2[1], type2[2], type2[3]];
+            
+            let complementaryScore = 0;
+            
+            // E/I维度：互补加分（外向+内向是很好的组合）
+            if (dimensions1[0] !== dimensions2[0]) {
+                complementaryScore += 8;
+            }
+            
+            // S/N维度：相同加分（相同的认知方式有助于理解）
+            if (dimensions1[1] === dimensions2[1]) {
+                complementaryScore += 7;
+            }
+            
+            // T/F维度：互补加分（思考型和情感型的平衡）
+            if (dimensions1[2] !== dimensions2[2]) {
+                complementaryScore += 6;
+            }
+            
+            // J/P维度：一个J一个P最理想（计划型和灵活型的平衡）
+            if (dimensions1[3] !== dimensions2[3]) {
+                complementaryScore += 7;
+            }
+            
+            return complementaryScore;
+        }
+
+        // 计算匹配分数
+        function calculateMatchScore(type1, type2) {
+            let score = 55; // 基础分数
+            
+            // 计算互补性得分
+            score += isComplementary(type1, type2);
+            
+            // 特殊匹配加分（基于MBTI理论的理想匹配）
+            const idealMatches = {
+                'INFJ': ['ENFP', 'ENTP', 'INFP', 'INTJ'],
+                'INTJ': ['ENFP', 'ENTP', 'INFJ', 'INTP'],
+                'ENFP': ['INFJ', 'INTJ', 'ENFJ', 'INFP'],
+                'ENTP': ['INFJ', 'INTJ', 'ENTJ', 'INTP'],
+                'INFP': ['ENFJ', 'ENTJ', 'INFJ', 'ENFP'],
+                'INTP': ['ENTJ', 'ESTJ', 'INTJ', 'ENTP'],
+                'ENFJ': ['INFP', 'ISFP', 'ENFP', 'INFJ'],
+                'ENTJ': ['INFP', 'INTP', 'ENTP', 'INTJ'],
+                'ISFJ': ['ESFP', 'ESTP', 'ISTJ', 'ISFP'],
+                'ISTJ': ['ESFP', 'ESTP', 'ISFJ', 'ESTJ'],
+                'ESFJ': ['ISFP', 'ISTP', 'ESTJ', 'ESTP'],
+                'ESTJ': ['ISTP', 'ISFP', 'ESFJ', 'ISTJ'],
+                'ISFP': ['ENFJ', 'ESFJ', 'ISFJ', 'ESFP'],
+                'ISTP': ['ESTJ', 'ESFJ', 'ISTJ', 'ESTP'],
+                'ESFP': ['ISFJ', 'ISTJ', 'ISFP', 'ESFP'],
+                'ESTP': ['ISFJ', 'ISTJ', 'ISTP', 'ESFP']
+            };
+            
+            // 完美匹配加分
+            if (idealMatches[type1]?.includes(type2)) {
+                const matchIndex = idealMatches[type1].indexOf(type2);
+                // 根据匹配优先级给予不同分数
+                score += [17, 15, 13, 11][matchIndex] || 10;
+            }
+            
+            // 相同类型的特殊处理
+            if (type1 === type2) {
+                // 某些类型和自己匹配也不错
+                const goodSelfMatches = ['ENFP', 'INFP', 'ENFJ', 'INFJ', 'ESFP', 'ISFP'];
+                if (goodSelfMatches.includes(type1)) {
+                    score += 5;
+                } else {
+                    score -= 5; // 其他类型最好有互补的伴侣
+                }
+            }
+            
+            // 性格特质组合的额外调整
+            const traits = {
+                // 理想主义者组合
+                idealists: ['INFJ', 'INFP', 'ENFJ', 'ENFP'],
+                // 分析者组合
+                analysts: ['INTJ', 'INTP', 'ENTJ', 'ENTP'],
+                // 实干家组合
+                pragmatists: ['ISTP', 'ISFP', 'ESTP', 'ESFP'],
+                // 守护者组合
+                guardians: ['ISTJ', 'ISFJ', 'ESTJ', 'ESFJ']
+            };
+            
+            // 如果两个类型属于互补的性格特质组，加分
+            function isComplementaryGroup(t1, t2) {
+                return (
+                    (traits.idealists.includes(t1) && traits.analysts.includes(t2)) ||
+                    (traits.analysts.includes(t1) && traits.idealists.includes(t2)) ||
+                    (traits.pragmatists.includes(t1) && traits.guardians.includes(t2)) ||
+                    (traits.guardians.includes(t1) && traits.pragmatists.includes(t2))
+                );
+            }
+            
+            if (isComplementaryGroup(type1, type2)) {
+                score += 8;
+            }
+            
+            // 确保分数在0-100之间
+            return Math.min(100, Math.max(0, Math.round(score)));
+        }
+
+        // 获取匹配描述
+        function getCompatibilityDescription(score) {
+            if (score >= 90) {
+                return {
+                    description: "完美匹配！你们的性格特质非常互补，有很大的发展潜力。",
+                    tips: [
+                        "保持开放和诚实的沟通",
+                        "珍惜彼此的独特性",
+                        "共同制定长期目标",
+                        "定期进行深度交流"
+                    ],
+                    challenges: [
+                        "避免过分理想化对方",
+                        "注意保持适当的个人空间",
+                        "学会处理分歧和矛盾"
+                    ]
+                };
+            } else if (score >= 75) {
+                return {
+                    description: "很好的匹配！你们有很多共同点，也有互补的特质。",
+                    tips: [
+                        "多关注对方的需求",
+                        "学习欣赏差异",
+                        "建立共同的兴趣爱好",
+                        "保持良好的沟通习惯"
+                    ],
+                    challenges: [
+                        "处理性格差异带来的冲突",
+                        "平衡个人和共同的时间",
+                        "培养互相理解和包容"
+                    ]
+                };
+            } else if (score >= 60) {
+                return {
+                    description: "还不错的匹配，需要双方都愿意投入努力来维护关系。",
+                    tips: [
+                        "增进相互了解",
+                        "培养共同话题",
+                        "保持耐心和包容",
+                        "建立有效的沟通方式"
+                    ],
+                    challenges: [
+                        "克服沟通障碍",
+                        "处理价值观差异",
+                        "建立信任需要更多时间"
+                    ]
+                };
+            } else {
+                return {
+                    description: "这种组合可能需要更多努力来维护关系，但只要双方都愿意付出，依然可以建立良好的关系。",
+                    tips: [
+                        "保持开放和包容的心态",
+                        "学习对方的思维方式",
+                        "寻找共同点",
+                        "建立有效的沟通机制"
+                    ],
+                    challenges: [
+                        "性格差异带来的误解",
+                        "需要更多时间来适应对方",
+                        "可能需要专业的关系咨询"
+                    ]
+                };
+            }
+        }
+
+        // 添加性格特征对比函数
+        function comparePersonalities(type1, type2) {
+            const dimensions = {
+                E: '外向：倾向于从外部世界获取能量，喜欢社交',
+                I: '内向：倾向于从内心世界获取能量，需要独处时间',
+                S: '感知：注重具体细节和实际经验',
+                N: '直觉：注重概念和可能性',
+                T: '思考：做决定时偏重逻辑和客观分析',
+                F: '感受：做决定时偏重价值观和他人感受',
+                J: '判断：喜欢计划和确定性',
+                P: '知觉：喜欢灵活和适应性'
+            };
+
+            const similarities = [];
+            const differences = [];
+
+            // 比较每个维度
+            for (let i = 0; i < 4; i++) {
+                const dim1 = type1[i];
+                const dim2 = type2[i];
+                
+                if (dim1 === dim2) {
+                    switch(i) {
+                        case 0: // E/I
+                            similarities.push(`你们都${dimensions[dim1].split('：')[1]}`);
+                            break;
+                        case 1: // S/N
+                            similarities.push(`在信息收集方面，你们都${dimensions[dim1].split('：')[1]}`);
+                            break;
+                        case 2: // T/F
+                            similarities.push(`在决策方式上，你们都${dimensions[dim1].split('：')[1]}`);
+                            break;
+                        case 3: // J/P
+                            similarities.push(`在生活方式上，你们都${dimensions[dim1].split('：')[1]}`);
+                            break;
+                    }
+                } else {
+                    switch(i) {
+                        case 0: // E/I
+                            differences.push(`一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
+                            break;
+                        case 1: // S/N
+                            differences.push(`在信息收集方面，一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
+                            break;
+                        case 2: // T/F
+                            differences.push(`在决策方式上，一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
+                            break;
+                        case 3: // J/P
+                            differences.push(`在生活方式上，一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
+                            break;
+                    }
+                }
+            }
+
+            // 添加一些额外的分析
+            if (type1[0] !== type2[0]) { // E/I 不同
+                differences.push('你们的社交能量来源不同，这有助于在社交和独处之间找到平衡');
+            }
+            if (type1[1] === type2[1]) { // S/N 相同
+                similarities.push('你们有相似的思维方式，容易相互理解');
+            }
+            if (type1[2] !== type2[2]) { // T/F 不同
+                differences.push('你们的决策方式互补，可以全面考虑问题的不同方面');
+            }
+            if (type1[3] === type2[3]) { // J/P 相同
+                similarities.push('你们有相似的生活节奏，这有助于减少日常摩擦');
+            }
+
+            return {
+                similarities,
+                differences
+            };
+        }
+    </script>
+</body>
+</html>

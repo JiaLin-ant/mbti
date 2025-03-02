@@ -99,8 +99,11 @@
                         </a>
                     </div>
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600" aria-current="page">
+                        <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-blue-600" aria-current="page">
                             MBTI测试
+                        </a>
+                        <a href="#" id="navLoveMatchLink" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600">
+                            恋爱匹配
                         </a>
                     </div>
                 </div>
@@ -118,9 +121,17 @@
                     <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto" aria-describedby="hero-title">
                         通过科学的MBTI测试，了解你的性格特质，发现真实的自己
                     </p>
-                    <button id="startTest" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg" aria-label="开始MBTI性格测试">
-                        开始测试
-                    </button>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button id="startTest" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg" aria-label="开始MBTI性格测试">
+                            开始测试
+                        </button>
+                        <a href="#" id="heroLoveMatchLink" class="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg inline-flex items-center justify-center" aria-label="前往恋爱匹配测试">
+                            恋爱匹配测试
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -2952,6 +2963,19 @@
             document.getElementById('testContainer').classList.remove('hidden');
             showQuestion(0);
         }
+
+        // 检测是否在本地开发环境
+        const isLocalDev = window.location.hostname === '127.0.0.1' || 
+                           window.location.hostname === 'localhost';
+        
+        // 设置链接路径
+        const loveMatchPath = isLocalDev ? '/public/love-match/index.html' : '/love-match/';
+        
+        // 设置导航栏链接
+        document.getElementById('navLoveMatchLink').href = loveMatchPath;
+        
+        // 设置 Hero 部分按钮链接
+        document.getElementById('heroLoveMatchLink').href = loveMatchPath;
     </script>
 <div style="display: none;">
 <!-- Google tag (gtag.js) -->
