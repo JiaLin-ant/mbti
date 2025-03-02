@@ -11,9 +11,9 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线MBTI性格测试，通过40道专业测试题，准确分析你的16型人格类型。了解自己是分析家、外交家、哨兵还是探险家，发现最适合的职业发展方向和人际关系建议。">
-    <meta name="keywords" content="MBTI测试,16型人格测试,性格测试,职业性格测试,MBTI中文测试,免费性格测试,在线心理测试,职业规划,人格分析,性格分析,心理测评">
-    <title>MBTI性格测试 - 免费在线测试分析你的16型人格类型 | 职业性格测评</title>
+    <meta name="description" content="免费在线MBTI性格测试，通过40道专业测试题，准确分析你的16型人格类型。了解自己是分析家、外交家、哨兵还是探险家，发现最适合的职业发展方向和恋爱匹配类型。">
+    <meta name="keywords" content="MBTI测试,16型人格测试,性格测试,职业性格测试,MBTI中文测试,免费性格测试,在线心理测试,职业规划,人格分析,性格分析,心理测评,恋爱匹配,性格配对">
+    <title>MBTI性格测试 | 免费在线16型人格测试 | 附恋爱匹配功能</title>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mbti.example.com/index.html">
@@ -133,6 +133,31 @@
                         </a>
                     </div>
                 </div>
+            </section>
+
+            <!-- 在 Hero Section 下方添加恋爱匹配功能介绍 -->
+            <section class="py-8 px-6 bg-gradient-to-b from-white to-pink-50">
+              <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                  <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">找到你的理想伴侣</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                      通过我们的 MBTI 恋爱匹配系统，发现与你性格最匹配的伴侣类型。科学分析16种人格类型的相容性，提供专业的恋爱建议和相处指南。
+                    </p>
+                    <div class="flex items-center space-x-4">
+                      <a href="/love-match/" class="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg inline-flex items-center">
+                        立即测试匹配度
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="md:w-1/2">
+                    <img src="/images/love-match-illustration.svg" alt="MBTI恋爱匹配" class="w-full max-w-md mx-auto rounded-lg shadow-lg">
+                  </div>
+                </div>
+              </div>
             </section>
 
             <!-- Personality Types Grid -->
@@ -298,6 +323,20 @@
                     </div>
                 </div>
             </section>
+
+            <!-- 在 Personality Types Grid 下方添加恋爱匹配推荐 -->
+            <div class="text-center py-8">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">想知道哪种性格类型与你最匹配？</h3>
+              <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                每种MBTI类型都有最适合的恋爱匹配对象。通过我们的恋爱匹配测试，发现你的理想伴侣类型，了解如何建立和谐的亲密关系。
+              </p>
+              <a href="/love-match/" class="text-pink-600 hover:text-pink-800 font-medium text-lg inline-flex items-center">
+                前往恋爱匹配测试
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
 
             <!-- Test Container -->
             <div id="testContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden" role="dialog" aria-labelledby="test-title" aria-modal="true">
