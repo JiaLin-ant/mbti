@@ -21,6 +21,13 @@
       ]
     }
   ],
+  "redirects": [
+    { 
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/love-match", "destination": "/love-match/index.html" }
   ]
