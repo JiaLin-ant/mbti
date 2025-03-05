@@ -22,6 +22,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/love-match", "destination": "/love-match/index.html" }
+    { "source": "/love-match", "destination": "/public/love-match/index.html" }
   ]
 }
