@@ -80,6 +80,8 @@
             scroll-behavior: smooth;  /* 添加平滑滚动效果 */
         }
     </style>
+    <!-- 在 head 部分添加规范链接 -->
+    <link rel="canonical" href="https://www.mbtitests.com/" />
 </head>
 <body class="bg-white min-h-screen">
     <!-- 添加跳转到主要内容的链接，提高可访问性 -->
@@ -2982,14 +2984,25 @@
         const isLocalDev = window.location.hostname === '127.0.0.1' || 
                            window.location.hostname === 'localhost';
         
-        // 设置链接路径
-        const loveMatchPath = isLocalDev ? '/public/love-match/index.html' : '/love-match/';
-        
-        // 设置导航栏链接
-        document.getElementById('navLoveMatchLink').href = loveMatchPath;
-        
-        // 设置 Hero 部分按钮链接
-        document.getElementById('heroLoveMatchLink').href = loveMatchPath;
+        // 设置链接路径 - 仅在本地开发环境中修改路径
+        if (isLocalDev) {
+            const loveMatchPath = '/public/love-match/index.html';
+            
+            // 设置导航栏链接
+            if (document.getElementById('navLoveMatchLink')) {
+                document.getElementById('navLoveMatchLink').href = loveMatchPath;
+            }
+            
+            // 设置 Hero 部分按钮链接
+            if (document.getElementById('heroLoveMatchLink')) {
+                document.getElementById('heroLoveMatchLink').href = loveMatchPath;
+            }
+            
+            // 设置其他链接
+            document.querySelectorAll('a[href="/love-match/"]').forEach(link => {
+                link.href = loveMatchPath;
+            });
+        }
     </script>
 <div style="display: none;">
 <!-- Google tag (gtag.js) -->

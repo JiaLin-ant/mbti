@@ -60,6 +60,8 @@
             scroll-behavior: smooth;
         }
     </style>
+    <!-- 在 head 部分添加规范链接 -->
+    <link rel="canonical" href="https://www.mbtitests.com/love-match/" />
 </head>
 <body class="bg-white min-h-screen">
     <!-- Header -->
@@ -625,6 +627,23 @@
                 similarities,
                 differences
             };
+        }
+
+        // 检测是否在本地开发环境
+        const isLocalDev = window.location.hostname === '127.0.0.1' || 
+                           window.location.hostname === 'localhost';
+        
+        // 仅在本地开发环境中修改路径
+        if (isLocalDev) {
+            const mbtiTestPath = '/index.html';
+            
+            // 设置导航栏链接
+            document.querySelectorAll('header a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === '/') {
+                    link.href = mbtiTestPath;
+                }
+            });
         }
     </script>
     <!-- 在 </body> 标签前添加 Google Analytics -->
