@@ -82,19 +82,26 @@
                             恋爱匹配
                         </a>
                     </div>
-                    <!-- 语言切换器 -->
-                    <a href="/chinese/" class="flex items-center text-gray-600 hover:text-blue-600 mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                        中文
-                    </a>
-                    <a href="/love-match/en/" class="flex items-center text-gray-600 hover:text-blue-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                        English
-                    </a>
+                    <!-- Language Switcher -->
+                    <div class="relative language-switcher">
+                        <button class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none language-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                            </svg>
+                            中文
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg overflow-hidden z-50 hidden language-dropdown">
+                            <a href="/love-match/" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50">
+                                中文
+                            </a>
+                            <a href="/love-match/en/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                                English
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -629,6 +636,30 @@
                 differences: differences
             };
         }
+
+        // 添加语言选择器的JavaScript代码
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSwitcher = document.querySelector('.language-switcher');
+            const languageDropdown = document.querySelector('.language-dropdown');
+            const languageButton = document.querySelector('.language-button');
+            
+            // 点击按钮时切换下拉菜单的显示状态
+            languageButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                languageDropdown.classList.toggle('hidden');
+            });
+            
+            // 点击页面其他地方时隐藏下拉菜单
+            document.addEventListener('click', function() {
+                languageDropdown.classList.add('hidden');
+            });
+            
+            // 防止点击下拉菜单本身时关闭
+            languageDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
     </script>
 </body>
 </html>
