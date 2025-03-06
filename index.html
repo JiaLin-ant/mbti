@@ -108,12 +108,25 @@
                             </a>
                         </div>
                         <!-- Language Switcher -->
-                        <a href="/chinese/" class="flex items-center text-gray-600 hover:text-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                            </svg>
-                            中文
-                        </a>
+                        <div class="relative language-switcher">
+                            <button class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none language-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                                </svg>
+                                English
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg overflow-hidden z-50 hidden language-dropdown">
+                                <a href="/chinese/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                                    中文
+                                </a>
+                                <a href="/" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50">
+                                    English
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -1381,7 +1394,27 @@
                 console.error('Start test button not found');
             }
             
-            // 其他初始化代码...
+            // 添加语言选择器的JavaScript代码
+            const languageSwitcher = document.querySelector('.language-switcher');
+            const languageDropdown = document.querySelector('.language-dropdown');
+            const languageButton = document.querySelector('.language-button');
+            
+            // 点击按钮时切换下拉菜单的显示状态
+            languageButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                languageDropdown.classList.toggle('hidden');
+            });
+            
+            // 点击页面其他地方时隐藏下拉菜单
+            document.addEventListener('click', function() {
+                languageDropdown.classList.add('hidden');
+            });
+            
+            // 防止点击下拉菜单本身时关闭
+            languageDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
         });
         
         // Test related functions
@@ -1487,7 +1520,7 @@
                 </li>
             `).join('');
 
-            // 填充优势列表
+            // 填充关系列表
             const strengthsList = document.getElementById('strengthsList');
             strengthsList.innerHTML = typeData.relationships.strengths.map(item => `
                 <li class="flex items-start">
@@ -1498,142 +1531,37 @@
                 </li>
             `).join('');
 
-            // 填充挑战列表
             const challengesList = document.getElementById('challengesList');
             challengesList.innerHTML = typeData.relationships.challenges.map(item => `
                 <li class="flex items-start">
                     <svg class="h-5 w-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <span>${item}</span>
                 </li>
             `).join('');
 
-            // 填充最佳匹配类型
+            // 填充最佳匹配列表
             const bestMatchesList = document.getElementById('bestMatchesList');
-            bestMatchesList.innerHTML = typeData.relationships.bestMatches.map(matchType => `
-                <span class="inline-block bg-pink-100 text-pink-800 rounded-full px-3 py-1 text-sm font-medium">
-                    ${matchType}
-                </span>
+            bestMatchesList.innerHTML = typeData.relationships.bestMatches.map(item => `
+                <span class="px-2 py-1 bg-pink-100 text-pink-800 rounded-full">${item}</span>
             `).join('');
 
-            // 填充职业列表
+            // 填充适合的职业路径列表
             const careersList = document.getElementById('careersList');
             careersList.innerHTML = typeData.careers.map(item => `
                 <li class="flex items-start">
-                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    <svg class="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <span>${item}</span>
                 </li>
             `).join('');
-
-            // 显示类型详情容器
-            document.getElementById('typeDetailContainer').classList.remove('hidden');
         }
         
         function closeTypeDetail() {
             document.getElementById('typeDetailContainer').classList.add('hidden');
         }
-
-        function navigateQuestion(direction) {
-            // 保存当前问题的答案
-            if (direction > 0 && userAnswers[currentQuestion] === null) {
-                return; // 如果用户没有回答当前问题，不能前进
-            }
-            
-            // 计算新的问题索引
-            const newIndex = currentQuestion + direction;
-            
-            // 检查是否超出范围
-            if (newIndex < 0) {
-                return;
-            }
-            
-            // 如果是最后一个问题并且用户点击了"下一步"，则显示结果
-            if (newIndex >= questions.length) {
-                calculateResult();
-                return;
-            }
-            
-            // 更新当前问题索引并显示新问题
-            currentQuestion = newIndex;
-            showQuestion(currentQuestion);
-        }
-
-        function calculateResult() {
-            console.log("Calculating result..."); // 调试日志
-            
-            // 计算每个维度的得分
-            let eScore = 0, iScore = 0, sScore = 0, nScore = 0, tScore = 0, fScore = 0, jScore = 0, pScore = 0;
-            
-            userAnswers.forEach((answer, index) => {
-                if (index >= questions.length || !questions[index]) {
-                    console.warn(`Question at index ${index} not found`);
-                    return;
-                }
-                
-                const dimension = questions[index].dimension;
-                console.log(`Question ${index}, dimension: ${dimension}, answer: ${answer}`); // 调试日志
-                
-                switch(dimension) {
-                    case 'EI':
-                        if (answer === 0) eScore++;
-                        else iScore++;
-                        break;
-                    case 'SN':
-                        if (answer === 0) sScore++;
-                        else nScore++;
-                        break;
-                    case 'TF':
-                        if (answer === 0) tScore++;
-                        else fScore++;
-                        break;
-                    case 'JP':
-                        if (answer === 0) jScore++;
-                        else pScore++;
-                        break;
-                    default:
-                        console.warn(`Unknown dimension: ${dimension}`);
-                }
-            });
-            
-            console.log(`Scores - E:${eScore} I:${iScore} S:${sScore} N:${nScore} T:${tScore} F:${fScore} J:${jScore} P:${pScore}`); // 调试日志
-            
-            // 确定每个维度的结果
-            const e_i = eScore >= iScore ? 'E' : 'I';
-            const s_n = sScore >= nScore ? 'S' : 'N';
-            const t_f = tScore >= fScore ? 'T' : 'F';
-            const j_p = jScore >= pScore ? 'J' : 'P';
-            
-            // 组合成最终的MBTI类型
-            const mbtiType = e_i + s_n + t_f + j_p;
-            console.log(`Final MBTI type: ${mbtiType}`); // 调试日志
-            
-            // 检查类型是否存在
-            if (!mbtiTypes[mbtiType]) {
-                console.error(`MBTI type ${mbtiType} not found in data`);
-                // 使用默认类型
-                showTypeDetail('INTJ');
-                return;
-            }
-            
-            // 关闭测试容器并显示结果
-            closeTest();
-            showTypeDetail(mbtiType);
-        }
     </script>
-
-    <!-- Google Analytics -->
-    <div style="display: none;">
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFKG3PGVN4"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-SFKG3PGVN4');
-        </script>
-    </div>
 </body>
 </html>
-

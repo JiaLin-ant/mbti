@@ -83,12 +83,25 @@
                         </a>
                     </div>
                     <!-- Language Switcher -->
-                    <a href="/love-match/" class="flex items-center text-gray-600 hover:text-blue-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                        中文
-                    </a>
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                            </svg>
+                            English
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-36 bg-white rounded-md shadow-lg overflow-hidden z-50 hidden group-hover:block">
+                            <a href="/love-match/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                                中文
+                            </a>
+                            <a href="/love-match/en/" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50">
+                                English
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -224,154 +237,113 @@
                     </button>
                 </div>
                 
-                <!-- Your Type Selection -->
+                <!-- Type Selection -->
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Select Your Personality Type</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Select Personality Types</h3>
                     
-                    <!-- Dropdown Selection -->
-                    <div class="mb-4">
-                        <label for="yourTypeDropdown" class="block text-gray-700 mb-2">Choose your MBTI type:</label>
-                        <select id="yourTypeDropdown" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                            <option value="" selected disabled>Select your type</option>
-                            <option value="INTJ">INTJ - The Architect</option>
-                            <option value="INTP">INTP - The Logician</option>
-                            <option value="ENTJ">ENTJ - The Commander</option>
-                            <option value="ENTP">ENTP - The Debater</option>
-                            <option value="INFJ">INFJ - The Advocate</option>
-                            <option value="INFP">INFP - The Mediator</option>
-                            <option value="ENFJ">ENFJ - The Protagonist</option>
-                            <option value="ENFP">ENFP - The Campaigner</option>
-                            <option value="ISTJ">ISTJ - The Inspector</option>
-                            <option value="ISFJ">ISFJ - The Defender</option>
-                            <option value="ESTJ">ESTJ - The Executive</option>
-                            <option value="ESFJ">ESFJ - The Consul</option>
-                            <option value="ISTP">ISTP - The Virtuoso</option>
-                            <option value="ISFP">ISFP - The Artist</option>
-                            <option value="ESTP">ESTP - The Entrepreneur</option>
-                            <option value="ESFP">ESFP - The Entertainer</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Grid Selection -->
-                    <div id="yourTypeSection">
-                        <p class="text-gray-600 mb-3">Or select from the grid:</p>
-                        <div class="grid grid-cols-4 gap-2">
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESFP</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Partner Type Selection -->
-                <div id="partnerTypeSection" class="mb-8 hidden">
-                    <h3 class="text-xl font-semibold text-pink-800 mb-4">Select Your Partner's Personality Type</h3>
-                    
-                    <!-- Dropdown Selection -->
-                    <div class="mb-4">
-                        <label for="partnerTypeDropdown" class="block text-gray-700 mb-2">Choose your partner's MBTI type:</label>
-                        <select id="partnerTypeDropdown" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500">
-                            <option value="" selected disabled>Select partner type</option>
-                            <option value="INTJ">INTJ - The Architect</option>
-                            <option value="INTP">INTP - The Logician</option>
-                            <option value="ENTJ">ENTJ - The Commander</option>
-                            <option value="ENTP">ENTP - The Debater</option>
-                            <option value="INFJ">INFJ - The Advocate</option>
-                            <option value="INFP">INFP - The Mediator</option>
-                            <option value="ENFJ">ENFJ - The Protagonist</option>
-                            <option value="ENFP">ENFP - The Campaigner</option>
-                            <option value="ISTJ">ISTJ - The Inspector</option>
-                            <option value="ISFJ">ISFJ - The Defender</option>
-                            <option value="ESTJ">ESTJ - The Executive</option>
-                            <option value="ESFJ">ESFJ - The Consul</option>
-                            <option value="ISTP">ISTP - The Virtuoso</option>
-                            <option value="ISFP">ISFP - The Artist</option>
-                            <option value="ESTP">ESTP - The Entrepreneur</option>
-                            <option value="ESFP">ESFP - The Entertainer</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Grid Selection -->
-                    <div>
-                        <p class="text-gray-600 mb-3">Or select from the grid:</p>
-                        <div class="grid grid-cols-4 gap-2">
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESTJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESFJ</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISFP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESTP</button>
-                            <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESFP</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Match Result -->
-            <div id="matchResultSection" class="hidden">
-                <div class="bg-gradient-to-r from-blue-50 to-pink-50 p-6 rounded-xl mb-8">
-                    <div class="flex flex-col md:flex-row items-center justify-between">
-                        <div class="flex items-center mb-4 md:mb-0">
-                            <div class="bg-blue-100 p-3 rounded-lg">
-                                <span id="yourTypeDisplay" class="text-xl font-bold text-blue-800">INTJ</span>
-                            </div>
-                            <div class="mx-4 text-gray-400">+</div>
-                            <div class="bg-pink-100 p-3 rounded-lg">
-                                <span id="partnerTypeDisplay" class="text-xl font-bold text-pink-800">ENFP</span>
-                            </div>
-                        </div>
-                        <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100">
-                            <div class="text-center">
-                                <div class="text-sm text-gray-500 mb-1">Compatibility</div>
-                                <div id="compatibilityScore" class="text-2xl font-bold text-purple-600">85%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="p-6 bg-indigo-50 rounded-xl">
-                        <h4 class="text-xl font-semibold text-indigo-800 mb-4">Relationship Advice</h4>
-                        <p id="relationshipAdvice" class="text-gray-700">
-                            <!-- Will be populated by JavaScript -->
-                        </p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-green-50 rounded-xl">
-                            <h4 class="text-xl font-semibold text-green-800 mb-4">Similarities</h4>
-                            <ul id="similaritiesList" class="space-y-3">
-                                <!-- Will be populated by JavaScript -->
-                            </ul>
+                    <!-- Dropdown Selection - Side by Side -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <!-- Your Type -->
+                        <div>
+                            <label for="yourTypeDropdown" class="block text-gray-700 mb-2 font-medium">Your MBTI Type:</label>
+                            <select id="yourTypeDropdown" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-blue-50">
+                                <option value="" selected disabled>Select your type</option>
+                                <option value="INTJ">INTJ - The Architect</option>
+                                <option value="INTP">INTP - The Logician</option>
+                                <option value="ENTJ">ENTJ - The Commander</option>
+                                <option value="ENTP">ENTP - The Debater</option>
+                                <option value="INFJ">INFJ - The Advocate</option>
+                                <option value="INFP">INFP - The Mediator</option>
+                                <option value="ENFJ">ENFJ - The Protagonist</option>
+                                <option value="ENFP">ENFP - The Campaigner</option>
+                                <option value="ISTJ">ISTJ - The Inspector</option>
+                                <option value="ISFJ">ISFJ - The Defender</option>
+                                <option value="ESTJ">ESTJ - The Executive</option>
+                                <option value="ESFJ">ESFJ - The Consul</option>
+                                <option value="ISTP">ISTP - The Virtuoso</option>
+                                <option value="ISFP">ISFP - The Artist</option>
+                                <option value="ESTP">ESTP - The Entrepreneur</option>
+                                <option value="ESFP">ESFP - The Entertainer</option>
+                            </select>
                         </div>
                         
-                        <div class="p-6 bg-amber-50 rounded-xl">
-                            <h4 class="text-xl font-semibold text-amber-800 mb-4">Differences</h4>
-                            <ul id="differencesList" class="space-y-3">
+                        <!-- Partner Type -->
+                        <div>
+                            <label for="partnerTypeDropdown" class="block text-gray-700 mb-2 font-medium">Partner's MBTI Type:</label>
+                            <select id="partnerTypeDropdown" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-pink-50">
+                                <option value="" selected disabled>Select partner type</option>
+                                <option value="INTJ">INTJ - The Architect</option>
+                                <option value="INTP">INTP - The Logician</option>
+                                <option value="ENTJ">ENTJ - The Commander</option>
+                                <option value="ENTP">ENTP - The Debater</option>
+                                <option value="INFJ">INFJ - The Advocate</option>
+                                <option value="INFP">INFP - The Mediator</option>
+                                <option value="ENFJ">ENFJ - The Protagonist</option>
+                                <option value="ENFP">ENFP - The Campaigner</option>
+                                <option value="ISTJ">ISTJ - The Inspector</option>
+                                <option value="ISFJ">ISFJ - The Defender</option>
+                                <option value="ESTJ">ESTJ - The Executive</option>
+                                <option value="ESFJ">ESFJ - The Consul</option>
+                                <option value="ISTP">ISTP - The Virtuoso</option>
+                                <option value="ISFP">ISFP - The Artist</option>
+                                <option value="ESTP">ESTP - The Entrepreneur</option>
+                                <option value="ESFP">ESFP - The Entertainer</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Calculate Button -->
+                    <div class="text-center">
+                        <button id="calculateMatchBtn" class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition shadow-md">
+                            Calculate Compatibility
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Match Result -->
+                <div id="matchResultSection" class="hidden">
+                    <div class="bg-gradient-to-r from-blue-50 to-pink-50 p-6 rounded-xl mb-8">
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <div class="flex items-center mb-4 md:mb-0">
+                                <div class="bg-blue-100 p-3 rounded-lg">
+                                    <span id="yourTypeDisplay" class="text-xl font-bold text-blue-800">INTJ</span>
+                                </div>
+                                <div class="mx-4 text-gray-400">+</div>
+                                <div class="bg-pink-100 p-3 rounded-lg">
+                                    <span id="partnerTypeDisplay" class="text-xl font-bold text-pink-800">ENFP</span>
+                                </div>
+                            </div>
+                            <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500 mb-1">Compatibility</div>
+                                    <div id="compatibilityScore" class="text-2xl font-bold text-purple-600">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 bg-indigo-50 rounded-xl">
+                            <h4 class="text-xl font-semibold text-indigo-800 mb-4">Relationship Advice</h4>
+                            <p id="relationshipAdvice" class="text-gray-700">
                                 <!-- Will be populated by JavaScript -->
-                            </ul>
+                            </p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-6 bg-green-50 rounded-xl">
+                                <h4 class="text-xl font-semibold text-green-800 mb-4">Similarities</h4>
+                                <ul id="similaritiesList" class="space-y-3">
+                                    <!-- Will be populated by JavaScript -->
+                                </ul>
+                            </div>
+                            
+                            <div class="p-6 bg-amber-50 rounded-xl">
+                                <h4 class="text-xl font-semibold text-amber-800 mb-4">Differences</h4>
+                                <ul id="differencesList" class="space-y-3">
+                                    <!-- Will be populated by JavaScript -->
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -555,27 +527,17 @@
             document.getElementById('startMatchTest').addEventListener('click', openMatchTest);
             document.getElementById('startMatchTestCTA').addEventListener('click', openMatchTest);
             
-            // Add click handlers for type buttons
-            document.querySelectorAll('.type-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const type = this.textContent;
-                    const section = this.closest('div').id === 'yourTypeSection' ? 'yourType' : 'partnerType';
-                    selectType(type, section);
-                });
-            });
-            
             // Add change handlers for dropdown selects
             document.getElementById('yourTypeDropdown').addEventListener('change', function() {
-                if (this.value) {
-                    selectType(this.value, 'yourType');
-                }
+                checkCalculateButtonStatus();
             });
             
             document.getElementById('partnerTypeDropdown').addEventListener('change', function() {
-                if (this.value) {
-                    selectType(this.value, 'partnerType');
-                }
+                checkCalculateButtonStatus();
             });
+            
+            // Add click handler for calculate button
+            document.getElementById('calculateMatchBtn').addEventListener('click', calculateMatch);
         });
         
         function openMatchTest() {
@@ -588,72 +550,38 @@
         }
         
         function resetMatchTest() {
-            yourType = null;
-            partnerType = null;
-            
-            document.getElementById('partnerTypeSection').classList.add('hidden');
-            document.getElementById('matchResultSection').classList.add('hidden');
-            
-            // Reset button styles
-            document.querySelectorAll('.type-btn').forEach(button => {
-                button.classList.remove('bg-blue-100', 'border-blue-300', 'bg-pink-100', 'border-pink-300');
-            });
-            
             // Reset dropdowns
             document.getElementById('yourTypeDropdown').selectedIndex = 0;
             document.getElementById('partnerTypeDropdown').selectedIndex = 0;
+            
+            // Hide result section
+            document.getElementById('matchResultSection').classList.add('hidden');
+            
+            // Disable calculate button
+            document.getElementById('calculateMatchBtn').disabled = true;
+            document.getElementById('calculateMatchBtn').classList.add('opacity-50', 'cursor-not-allowed');
         }
         
-        function selectType(type, section) {
-            // Update the selected type
-            if (section === 'yourType') {
-                yourType = type;
-                
-                // Update dropdown
-                const dropdown = document.getElementById('yourTypeDropdown');
-                for (let i = 0; i < dropdown.options.length; i++) {
-                    if (dropdown.options[i].value === type) {
-                        dropdown.selectedIndex = i;
-                        break;
-                    }
-                }
-                
-                // Update button styles for your type
-                document.querySelectorAll('#yourTypeSection .type-btn').forEach(button => {
-                    button.classList.remove('bg-blue-100', 'border-blue-300');
-                    if (button.textContent === type) {
-                        button.classList.add('bg-blue-100', 'border-blue-300');
-                    }
-                });
-                
-                // Show partner type section
-                document.getElementById('partnerTypeSection').classList.remove('hidden');
+        function checkCalculateButtonStatus() {
+            const yourType = document.getElementById('yourTypeDropdown').value;
+            const partnerType = document.getElementById('partnerTypeDropdown').value;
+            const calculateBtn = document.getElementById('calculateMatchBtn');
+            
+            if (yourType && partnerType) {
+                calculateBtn.disabled = false;
+                calculateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
             } else {
-                partnerType = type;
-                
-                // Update dropdown
-                const dropdown = document.getElementById('partnerTypeDropdown');
-                for (let i = 0; i < dropdown.options.length; i++) {
-                    if (dropdown.options[i].value === type) {
-                        dropdown.selectedIndex = i;
-                        break;
-                    }
-                }
-                
-                // Update button styles for partner type
-                document.querySelectorAll('#partnerTypeSection .type-btn').forEach(button => {
-                    button.classList.remove('bg-pink-100', 'border-pink-300');
-                    if (button.textContent === type) {
-                        button.classList.add('bg-pink-100', 'border-pink-300');
-                    }
-                });
-                
-                // Show match result
-                showMatchResult();
+                calculateBtn.disabled = true;
+                calculateBtn.classList.add('opacity-50', 'cursor-not-allowed');
             }
         }
         
-        function showMatchResult() {
+        function calculateMatch() {
+            const yourType = document.getElementById('yourTypeDropdown').value;
+            const partnerType = document.getElementById('partnerTypeDropdown').value;
+            
+            if (!yourType || !partnerType) return;
+            
             // Update type displays
             document.getElementById('yourTypeDisplay').textContent = yourType;
             document.getElementById('partnerTypeDisplay').textContent = partnerType;
