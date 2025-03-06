@@ -4,6 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
 
 <url>
@@ -11,6 +12,17 @@
  <priority>1.0</priority>
  <lastmod>2024-03-19</lastmod>
  <changefreq>weekly</changefreq>
+ <xhtml:link rel="alternate" hreflang="en" href="https://mbtitests.com/"/>
+ <xhtml:link rel="alternate" hreflang="zh" href="https://mbtitests.com/chinese/"/>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/chinese/</loc>
+ <priority>0.9</priority>
+ <lastmod>2024-03-19</lastmod>
+ <changefreq>weekly</changefreq>
+ <xhtml:link rel="alternate" hreflang="zh" href="https://mbtitests.com/chinese/"/>
+ <xhtml:link rel="alternate" hreflang="en" href="https://mbtitests.com/"/>
 </url>
 
 <url>
@@ -18,6 +30,17 @@
  <priority>0.9</priority>
  <lastmod>2023-08-01</lastmod>
  <changefreq>weekly</changefreq>
+ <xhtml:link rel="alternate" hreflang="zh" href="https://mbtitests.com/love-match/"/>
+ <xhtml:link rel="alternate" hreflang="en" href="https://mbtitests.com/love-match/en/"/>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/love-match/en/</loc>
+ <priority>0.9</priority>
+ <lastmod>2024-03-19</lastmod>
+ <changefreq>weekly</changefreq>
+ <xhtml:link rel="alternate" hreflang="en" href="https://mbtitests.com/love-match/en/"/>
+ <xhtml:link rel="alternate" hreflang="zh" href="https://mbtitests.com/love-match/"/>
 </url>
 
 </urlset>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO Meta Tags -->
+    <title>MBTI Love Match Test | Find Your Most Compatible Partner Type | Free Personality Matching</title>
+    <meta name="description" content="Discover your most compatible partner type through scientific MBTI love match test. Detailed compatibility analysis for 16 personality types, providing professional relationship advice and guidance to help you find your perfect match.">
+    <meta name="keywords" content="MBTI matching,MBTI love test,personality compatibility,relationship matching,MBTI compatibility,couple personality test,relationship guide,personality compatibility,psychological test,finding partner,MBTI match score,best partner type">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MBTI Love Match Test - Find Your Most Compatible Partner">
+    <meta property="og:description" content="Through MBTI personality test, scientifically analyze personality compatibility to help you find your ideal partner. Providing professional relationship advice and guidance.">
+    <meta property="og:url" content="https://mbtitests.com/love-match/en/">
+    <meta property="og:image" content="https://mbtitests.com/images/love-match-share.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MBTI Love Match Test",
+        "description": "Scientific MBTI personality matching system to help users find their most compatible partner type",
+        "url": "https://mbtitests.com/love-match/en/",
+        "applicationCategory": "LifestyleApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "2150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "16 personality types compatibility analysis",
+            "Detailed relationship advice",
+            "Scientific matching algorithm",
+            "Free online test"
+        ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+        * {
+            font-family: 'Noto Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mbtitests.com/love-match/en/">
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                        Psychological Assessment
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600">
+                            MBTI Test
+                        </a>
+                        <a href="/love-match/en/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-blue-600" aria-current="page">
+                            Love Match
+                        </a>
+                    </div>
+                    <!-- Language Switcher -->
+                    <a href="/love-match/" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                        中文
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-pink-50 to-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-600 text-transparent bg-clip-text">
+                Find Your Perfect Personality Match
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Discover which MBTI personality types are most compatible with you for a harmonious and fulfilling relationship
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button id="startMatchTest" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                    Start Love Match Test
+                </button>
+                <a href="/" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg inline-flex items-center justify-center">
+                    Take MBTI Test First
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Scientific Matching</h3>
+                    <p class="text-gray-600">
+                        Based on the Myers-Briggs Type Indicator, our algorithm analyzes personality compatibility to find your ideal match.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Relationship Advice</h3>
+                    <p class="text-gray-600">
+                        Get personalized insights on how to communicate effectively and navigate potential challenges with your partner.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Compatibility Insights</h3>
+                    <p class="text-gray-600">
+                        Understand the similarities and differences between personality types and how they influence your relationship dynamics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Select Your Type</h3>
+                    <p class="text-gray-600">
+                        Choose your MBTI personality type from the 16 available options. Not sure? Take our MBTI test first.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Select Partner Type</h3>
+                    <p class="text-gray-600">
+                        Choose your partner's MBTI personality type or explore compatibility with different types.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-pink-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Get Insights</h3>
+                    <p class="text-gray-600">
+                        Receive detailed compatibility analysis, including strengths, potential challenges, and relationship advice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-6">Ready to Find Your Perfect Match?</h2>
+                <p class="text-lg text-gray-700 text-center mb-8 max-w-2xl mx-auto">
+                    Discover which personality types are most compatible with yours and learn how to build a harmonious relationship.
+                </p>
+                <div class="flex justify-center">
+                    <button id="startMatchTestCTA" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg">
+                        Start Love Match Test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Match Test Container -->
+    <div id="matchTestContainer" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden" role="dialog" aria-modal="true">
+        <div class="bg-white p-8 rounded-2xl max-w-4xl w-full mx-4 shadow-xl overflow-y-auto max-h-[90vh]">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">MBTI Love Match Test</h2>
+                <button onclick="closeMatchTest()" class="text-gray-400 hover:text-gray-600 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Your Type Selection -->
+            <div id="yourTypeSection" class="mb-8">
+                <h3 class="text-xl font-semibold text-blue-800 mb-4">Select Your Personality Type</h3>
+                <div class="grid grid-cols-4 gap-2">
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">INFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ENFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ISFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 transition">ESFP</button>
+                </div>
+                <p class="text-sm text-gray-500 mt-3">
+                    Not sure about your type? <a href="/" class="text-blue-600 hover:underline">Take the MBTI test first</a>
+                </p>
+            </div>
+            
+            <!-- Partner Type Selection -->
+            <div id="partnerTypeSection" class="mb-8 hidden">
+                <h3 class="text-xl font-semibold text-pink-800 mb-4">Select Your Partner's Personality Type</h3>
+                <div class="grid grid-cols-4 gap-2">
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">INFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ENFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESTJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESFJ</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ISFP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESTP</button>
+                    <button class="type-btn p-2 rounded bg-gray-50 hover:bg-pink-50 border border-gray-200 hover:border-pink-300 transition">ESFP</button>
+                </div>
+            </div>
+            
+            <!-- Match Result -->
+            <div id="matchResultSection" class="hidden">
+                <div class="bg-gradient-to-r from-blue-50 to-pink-50 p-6 rounded-xl mb-8">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <span id="yourTypeDisplay" class="text-xl font-bold text-blue-800">INTJ</span>
+                            </div>
+                            <div class="mx-4 text-gray-400">+</div>
+                            <div class="bg-pink-100 p-3 rounded-lg">
+                                <span id="partnerTypeDisplay" class="text-xl font-bold text-pink-800">ENFP</span>
+                            </div>
+                        </div>
+                        <div class="bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-center">
+                                <div class="text-sm text-gray-500 mb-1">Compatibility</div>
+                                <div id="compatibilityScore" class="text-2xl font-bold text-purple-600">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="p-6 bg-indigo-50 rounded-xl">
+                        <h4 class="text-xl font-semibold text-indigo-800 mb-4">Relationship Advice</h4>
+                        <p id="relationshipAdvice" class="text-gray-700">
+                            <!-- Will be populated by JavaScript -->
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-green-50 rounded-xl">
+                            <h4 class="text-xl font-semibold text-green-800 mb-4">Similarities</h4>
+                            <ul id="similaritiesList" class="space-y-3">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="p-6 bg-amber-50 rounded-xl">
+                            <h4 class="text-xl font-semibold text-amber-800 mb-4">Differences</h4>
+                            <ul id="differencesList" class="space-y-3">
+                                <!-- Will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-8 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">About MBTI Love Match</h3>
+                    <p class="text-gray-600">
+                        Our love match test helps you understand personality compatibility based on the Myers-Briggs Type Indicator. Discover which personality types are most compatible with yours for a harmonious relationship.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/" class="text-blue-600 hover:text-blue-800 transition">MBTI Test</a>
+                        </li>
+                        <li>
+                            <a href="/love-match/en/" class="text-blue-600 hover:text-blue-800 transition">Love Match Test</a>
+                        </li>
+                        <li>
+                            <a href="/love-match/" class="text-blue-600 hover:text-blue-800 transition">中文版</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Disclaimer</h3>
+                    <p class="text-gray-600">
+                        This test is provided for educational and entertainment purposes only. It is not a substitute for professional relationship advice or counseling.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Psychological Assessment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for the love match functionality -->
+    <script>
+        // Variables to store selected types
+        let yourType = null;
+        let partnerType = null;
+        
+        // MBTI dimensions
+        const dimensions = {
+            'E': 'E: Extraverted - Gains energy from social interactions',
+            'I': 'I: Introverted - Gains energy from solitude and reflection',
+            'S': 'S: Sensing - Focuses on concrete facts and details',
+            'N': 'N: Intuitive - Focuses on patterns and possibilities',
+            'T': 'T: Thinking - Makes decisions based on logic and analysis',
+            'F': 'F: Feeling - Makes decisions based on values and empathy',
+            'J': 'J: Judging - Prefers structure and planning',
+            'P': 'P: Perceiving - Prefers flexibility and spontaneity'
+        };
+        
+        // Compatibility scores (higher = more compatible)
+        const compatibilityScores = {
+            'INTJ': {
+                'ENFP': 85, 'ENTP': 80, 'INFP': 75, 'INFJ': 70,
+                'ENTJ': 65, 'INTP': 60, 'ENFJ': 55, 'INTJ': 50,
+                'ISFP': 45, 'ESFP': 40, 'ISTP': 40, 'ESTP': 35,
+                'ISFJ': 30, 'ESFJ': 25, 'ISTJ': 25, 'ESTJ': 20
+            },
+            'INTP': {
+                'ENTJ': 85, 'ENFJ': 80, 'ENTP': 75, 'INFJ': 70,
+                'INTJ': 65, 'ENFP': 60, 'INFP': 55, 'INTP': 50,
+                'ISTP': 45, 'ESTP': 40, 'ISFP': 40, 'ESFP': 35,
+                'ISTJ': 30, 'ESTJ': 25, 'ISFJ': 25, 'ESFJ': 20
+            },
+            'ENTJ': {
+                'INTP': 85, 'ENTP': 80, 'INTJ': 75, 'INFJ': 70,
+                'ENFP': 65, 'INFP': 60, 'ENFJ': 55, 'ENTJ': 50,
+                'ISTP': 45, 'ESTP': 40, 'ISFP': 35, 'ESFP': 30,
+                'ISTJ': 30, 'ESTJ': 25, 'ISFJ': 20, 'ESFJ': 20
+            },
+            'ENTP': {
+                'INFJ': 85, 'INTJ': 80, 'INTP': 75, 'ENFJ': 70,
+                'INFP': 65, 'ENFP': 60, 'ENTJ': 55, 'ENTP': 50,
+                'ISFJ': 45, 'ESFJ': 40, 'ISTJ': 35, 'ESTJ': 30,
+                'ISFP': 30, 'ESFP': 25, 'ISTP': 25, 'ESTP': 20
+            },
+            'INFJ': {
+                'ENTP': 85, 'ENFP': 80, 'INFP': 75, 'INTJ': 70,
+                'INTP': 65, 'ENTJ': 60, 'ENFJ': 55, 'INFJ': 50,
+                'ISFP': 45, 'ESFP': 40, 'ISTP': 35, 'ESTP': 30,
+                'ISFJ': 30, 'ESFJ': 25, 'ISTJ': 25, 'ESTJ': 20
+            },
+            'INFP': {
+                'ENFJ': 85, 'ENTJ': 80, 'INFJ': 75, 'INTJ': 70,
+                'ENFP': 65, 'INTP': 60, 'ENTP': 55, 'INFP': 50,
+                'ISFJ': 45, 'ESFJ': 40, 'ISTJ': 35, 'ESTJ': 30,
+                'ISFP': 30, 'ESFP': 25, 'ISTP': 25, 'ESTP': 20
+            },
+            'ENFJ': {
+                'INFP': 85, 'ISFP': 80, 'INTP': 75, 'INTJ': 70,
+                'ENFP': 65, 'INFJ': 60, 'ENTP': 55, 'ENFJ': 50,
+                'ESFP': 45, 'ISFJ': 40, 'ISTP': 35, 'ISTJ': 30,
+                'ESFJ': 30, 'ESTP': 25, 'ESTJ': 25, 'ENTJ': 20
+            },
+            'ENFP': {
+                'INTJ': 85, 'INFJ': 80, 'ENTJ': 75, 'INTP': 70,
+                'INFP': 65, 'ENTP': 60, 'ENFJ': 55, 'ENFP': 50,
+                'ISFJ': 45, 'ISTJ': 40, 'ESFJ': 35, 'ESTJ': 30,
+                'ISFP': 30, 'ISTP': 25, 'ESFP': 25, 'ESTP': 20
+            },
+            'ISTJ': {
+                'ESFP': 85, 'ESTP': 80, 'ISFJ': 75, 'ESFJ': 70,
+                'ISFP': 65, 'ISTP': 60, 'ESTJ': 55, 'ISTJ': 50,
+                'ENFP': 45, 'ENTP': 40, 'ENFJ': 35, 'ENTJ': 30,
+                'INFP': 30, 'INFJ': 25, 'INTP': 25, 'INTJ': 20
+            },
+            'ISFJ': {
+                'ESFP': 85, 'ESTP': 80, 'ISTJ': 75, 'ESTJ': 70,
+                'ISFP': 65, 'ISTP': 60, 'ESFJ': 55, 'ISFJ': 50,
+                'ENFP': 45, 'ENTP': 40, 'ENFJ': 35, 'ENTJ': 30,
+                'INFP': 30, 'INFJ': 25, 'INTP': 25, 'INTJ': 20
+            },
+            'ESTJ': {
+                'ISFP': 85, 'ISTP': 80, 'ESFJ': 75, 'ISFJ': 70,
+                'ESFP': 65, 'ESTP': 60, 'ISTJ': 55, 'ESTJ': 50,
+                'ENFJ': 45, 'ENTJ': 40, 'ENFP': 35, 'ENTP': 30,
+                'INFJ': 30, 'INFP': 25, 'INTJ': 25, 'INTP': 20
+            },
+            'ESFJ': {
+                'ISFP': 85, 'ISTP': 80, 'ESTJ': 75, 'ISTJ': 70,
+                'ESFP': 65, 'ESTP': 60, 'ISFJ': 55, 'ESFJ': 50,
+                'ENFJ': 45, 'ENTJ': 40, 'ENFP': 35, 'ENTP': 30,
+                'INFJ': 30, 'INFP': 25, 'INTJ': 25, 'INTP': 20
+            },
+            'ISTP': {
+                'ESFJ': 85, 'ESTJ': 80, 'ISFJ': 75, 'ISTJ': 70,
+                'ESTP': 65, 'ESFP': 60, 'ISFP': 55, 'ISTP': 50,
+                'ENTJ': 45, 'ENFJ': 40, 'ENTP': 35, 'ENFP': 30,
+                'INTJ': 30, 'INFJ': 25, 'INTP': 25, 'INFP': 20
+            },
+            'ISFP': {
+                'ESTJ': 85, 'ESFJ': 80, 'ENTJ': 75, 'ENFJ': 70,
+                'ISTJ': 65, 'ISFJ': 60, 'ESTP': 55, 'ISFP': 50,
+                'ESFP': 45, 'ISTP': 40, 'ENTP': 35, 'ENFP': 30,
+                'INTJ': 30, 'INFJ': 25, 'INTP': 25, 'INFP': 20
+            },
+            'ESTP': {
+                'ISFJ': 85, 'ISTJ': 80, 'ESFJ': 75, 'ESTJ': 70,
+                'ISTP': 65, 'ISFP': 60, 'ESFP': 55, 'ESTP': 50,
+                'ENTJ': 45, 'ENFJ': 40, 'ENTP': 35, 'ENFP': 30,
+                'INTJ': 30, 'INFJ': 25, 'INTP': 25, 'INFP': 20
+            },
+            'ESFP': {
+                'ISFJ': 85, 'ISTJ': 80, 'ESFJ': 75, 'ESTJ': 70,
+                'ISTP': 65, 'ISFP': 60, 'ESTP': 55, 'ESFP': 50,
+                'ENFJ': 45, 'ENTJ': 40, 'ENFP': 35, 'ENTP': 30,
+                'INFJ': 30, 'INTJ': 25, 'INFP': 25, 'INTP': 20
+            }
+        };
+        
+        // Relationship advice
+        const relationshipAdvice = {
+            'INTJ-ENFP': "This pairing creates a dynamic balance. The INTJ provides structure and depth, while the ENFP brings spontaneity and emotional connection. Focus on clear communication about needs for alone time vs. social activities. The INTJ should practice expressing emotions, while the ENFP can help by respecting the INTJ's need for logical discussion during conflicts.",
+            'ENFP-INTJ': "This pairing creates a dynamic balance. The INTJ provides structure and depth, while the ENFP brings spontaneity and emotional connection. Focus on clear communication about needs for alone time vs. social activities. The ENFP should respect the INTJ's need for logical discussion, while the INTJ can work on expressing emotions more openly.",
+            'INFJ-ENTP': "This match combines the INFJ's depth and empathy with the ENTP's innovation and energy. The ENTP helps the INFJ explore new possibilities, while the INFJ provides emotional grounding. Key to success: ENTP should be mindful of the INFJ's need for emotional harmony, while INFJ should appreciate the ENTP's need for intellectual stimulation and debate.",
+            'ENTP-INFJ': "This match combines the ENTP's innovation and energy with the INFJ's depth and empathy. The INFJ helps the ENTP connect with deeper meaning, while the ENTP brings excitement and new ideas. Key to success: ENTP should be mindful of the INFJ's need for emotional harmony, while INFJ should appreciate the ENTP's need for intellectual stimulation and debate.",
+            'INFP-ENFJ': "This pairing creates a deeply meaningful connection. The INFP brings creativity and authenticity, while the ENFJ provides warmth and social connection. Both types value harmony and personal growth. Key to success: ENFJ should respect the INFP's need for alone time and personal space, while INFP should appreciate the ENFJ's desire for social connection and expression.",
+            'ENFJ-INFP': "This pairing creates a deeply meaningful connection. The ENFJ brings warmth and social connection, while the INFP provides creativity and authenticity. Both types value harmony and personal growth. Key to success: ENFJ should respect the INFP's need for alone time and personal space, while INFP should appreciate the ENFJ's desire for social connection and expression.",
+            'INTP-ENTJ': "This match combines intellectual power with practical action. The INTP brings deep analysis and innovative thinking, while the ENTJ provides direction and implementation. Key to success: ENTJ should value the INTP's need for theoretical exploration, while INTP should appreciate the ENTJ's focus on results and efficiency.",
+            'ENTJ-INTP': "This match combines practical action with intellectual power. The ENTJ brings direction and implementation, while the INTP provides deep analysis and innovative thinking. Key to success: ENTJ should value the INTP's need for theoretical exploration, while INTP should appreciate the ENTJ's focus on results and efficiency.",
+            'ISFJ-ESFP': "This pairing balances tradition with spontaneity. The ISFJ provides stability and care, while the ESFP brings fun and excitement. Key to success: ESFP should respect the ISFJ's need for routine and security, while ISFJ should embrace the ESFP's desire for new experiences and enjoyment.",
+            'ESFP-ISFJ': "This pairing balances spontaneity with tradition. The ESFP brings fun and excitement, while the ISFJ provides stability and care. Key to success: ESFP should respect the ISFJ's need for routine and security, while ISFJ should embrace the ESFP's desire for new experiences and enjoyment.",
+            'ESTJ-ISFP': "This match combines structure with creativity. The ESTJ provides organization and clarity, while the ISFP brings artistic sensibility and emotional depth. Key to success: ESTJ should appreciate the ISFP's need for personal expression and authenticity, while ISFP should respect the ESTJ's desire for order and efficiency.",
+            'ISFP-ESTJ': "This match combines creativity with structure. The ISFP brings artistic sensibility and emotional depth, while the ESTJ provides organization and clarity. Key to success: ISFP should respect the ESTJ's desire for order and efficiency, while ESTJ should appreciate the ISFP's need for personal expression and authenticity."
+        };
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('startMatchTest').addEventListener('click', openMatchTest);
+            document.getElementById('startMatchTestCTA').addEventListener('click', openMatchTest);
+            
+            // Add click handlers for type buttons
+            document.querySelectorAll('.type-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const type = this.textContent;
+                    const section = this.closest('div').id === 'yourTypeSection' ? 'yourType' : 'partnerType';
+                    selectType(type, section);
+                });
+            });
+        });
+        
+        function openMatchTest() {
+            document.getElementById('matchTestContainer').classList.remove('hidden');
+            resetMatchTest();
+        }
+        
+        function closeMatchTest() {
+            document.getElementById('matchTestContainer').classList.add('hidden');
+        }
+        
+        function resetMatchTest() {
+            yourType = null;
+            partnerType = null;
+            
+            document.getElementById('partnerTypeSection').classList.add('hidden');
+            document.getElementById('matchResultSection').classList.add('hidden');
+            
+            // Reset button styles
+            document.querySelectorAll('.type-btn').forEach(button => {
+                button.classList.remove('bg-blue-100', 'border-blue-300', 'bg-pink-100', 'border-pink-300');
+            });
+        }
+        
+        function selectType(type, section) {
+            // Update the selected type
+            if (section === 'yourType') {
+                yourType = type;
+                
+                               // Update button styles for your type
+                               document.querySelectorAll('#yourTypeSection .type-btn').forEach(button => {
+                    button.classList.remove('bg-blue-100', 'border-blue-300');
+                    if (button.textContent === type) {
+                        button.classList.add('bg-blue-100', 'border-blue-300');
+                    }
+                });
+                
+                // Show partner type section
+                document.getElementById('partnerTypeSection').classList.remove('hidden');
+            } else {
+                partnerType = type;
+                
+                // Update button styles for partner type
+                document.querySelectorAll('#partnerTypeSection .type-btn').forEach(button => {
+                    button.classList.remove('bg-pink-100', 'border-pink-300');
+                    if (button.textContent === type) {
+                        button.classList.add('bg-pink-100', 'border-pink-300');
+                    }
+                });
+                
+                // Show match result
+                showMatchResult();
+            }
+        }
+        
+        function showMatchResult() {
+            // Update type displays
+            document.getElementById('yourTypeDisplay').textContent = yourType;
+            document.getElementById('partnerTypeDisplay').textContent = partnerType;
+            
+            // Calculate compatibility score
+            let score = 50; // Default score
+            if (compatibilityScores[yourType] && compatibilityScores[yourType][partnerType]) {
+                score = compatibilityScores[yourType][partnerType];
+            }
+            document.getElementById('compatibilityScore').textContent = score + '%';
+            
+            // Generate similarities and differences
+            const { similarities, differences } = compareTypes(yourType, partnerType);
+            
+            // Update similarities list
+            const similaritiesList = document.getElementById('similaritiesList');
+            similaritiesList.innerHTML = similarities.map(item => `
+                <li class="flex items-start">
+                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+            
+            // Update differences list
+            const differencesList = document.getElementById('differencesList');
+            differencesList.innerHTML = differences.map(item => `
+                <li class="flex items-start">
+                    <svg class="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+            
+            // Update relationship advice
+            const adviceKey = `${yourType}-${partnerType}`;
+            const reverseAdviceKey = `${partnerType}-${yourType}`;
+            let advice = relationshipAdvice[adviceKey] || relationshipAdvice[reverseAdviceKey];
+            
+            if (!advice) {
+                advice = "This combination offers unique dynamics. Focus on open communication and understanding each other's personality differences. Respect your partner's natural tendencies and work together to find a balance that works for both of you.";
+            }
+            
+            document.getElementById('relationshipAdvice').textContent = advice;
+            
+            // Show match result section
+            document.getElementById('matchResultSection').classList.remove('hidden');
+        }
+        
+        function compareTypes(type1, type2) {
+            const similarities = [];
+            const differences = [];
+            
+            // Compare each dimension
+            for (let i = 0; i < 4; i++) {
+                const dim1 = type1[i];
+                const dim2 = type2[i];
+                
+                if (dim1 === dim2) {
+                    switch(i) {
+                        case 0: // E/I
+                            similarities.push(`You both ${dim1 === 'E' ? 'gain energy from social interactions' : 'need time alone to recharge'}`);
+                            break;
+                        case 1: // S/N
+                            similarities.push(`When gathering information, you both ${dim1 === 'S' ? 'focus on concrete facts and details' : 'focus on patterns and possibilities'}`);
+                            break;
+                        case 2: // T/F
+                            similarities.push(`When making decisions, you both ${dim1 === 'T' ? 'prioritize logic and objective analysis' : 'consider values and how others will be affected'}`);
+                            break;
+                        case 3: // J/P
+                            similarities.push(`In your lifestyle, you both ${dim1 === 'J' ? 'prefer structure and planning' : 'prefer flexibility and spontaneity'}`);
+                            break;
+                    }
+                } else {
+                    switch(i) {
+                        case 0: // E/I
+                            differences.push(`One of you ${dim1 === 'E' ? 'gains energy from social interactions' : 'needs time alone to recharge'}, while the other ${dim2 === 'E' ? 'gains energy from social interactions' : 'needs time alone to recharge'}`);
+                            break;
+                        case 1: // S/N
+                            differences.push(`When gathering information, one of you ${dim1 === 'S' ? 'focuses on concrete facts and details' : 'focuses on patterns and possibilities'}, while the other ${dim2 === 'S' ? 'focuses on concrete facts and details' : 'focuses on patterns and possibilities'}`);
+                            break;
+                        case 2: // T/F
+                            differences.push(`When making decisions, one of you ${dim1 === 'T' ? 'prioritizes logic and objective analysis' : 'considers values and how others will be affected'}, while the other ${dim2 === 'T' ? 'prioritizes logic and objective analysis' : 'considers values and how others will be affected'}`);
+                            break;
+                        case 3: // J/P
+                            differences.push(`In your lifestyle, one of you ${dim1 === 'J' ? 'prefers structure and planning' : 'prefers flexibility and spontaneity'}, while the other ${dim2 === 'J' ? 'prefers structure and planning' : 'prefers flexibility and spontaneity'}`);
+                            break;
+                    }
+                }
+            }
+
+            return {
+                similarities: similarities,
+                differences: differences
+            };
+        }
+    </script>
+    
+    <!-- Google Analytics -->
+    <div style="display: none;">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFKG3PGVN4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SFKG3PGVN4');
+        </script>
+    </div>
+</body>
+</html>

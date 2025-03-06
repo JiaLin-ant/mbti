@@ -26,9 +26,21 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/chinese/index.html",
+      "destination": "/chinese/",
+      "permanent": true
+    },
+    {
+      "source": "/love-match/en/index.html",
+      "destination": "/love-match/en/",
+      "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/love-match", "destination": "/love-match/index.html" }
+    { "source": "/love-match", "destination": "/love-match/index.html" },
+    { "source": "/love-match/en", "destination": "/love-match/en/index.html" },
+    { "source": "/chinese", "destination": "/chinese/index.html" }
   ]
 }
