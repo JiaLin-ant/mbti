@@ -19,7 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="MBTI恋爱配对测试 - 找到最适合的另一半">
     <meta property="og:description" content="通过MBTI性格测试，科学分析性格匹配度，帮你找到理想伴侣。提供专业的恋爱建议和相处指南。">
-    <meta property="og:url" content="https://www.mbtitests.com/love-match.html">
+    <meta property="og:url" content="https://mbtitests.com/love-match/">
     <meta property="og:image" content="https://www.mbtitests.com/images/love-match-share.jpg">
     
     <!-- 结构化数据 -->
@@ -29,7 +29,7 @@
         "@type": "WebApplication",
         "name": "MBTI 恋爱匹配测试",
         "description": "科学的 MBTI 性格匹配系统，帮助用户找到最适合的伴侣类型",
-        "url": "https://你的网站.com/love-match/",
+        "url": "https://mbtitests.com/love-match/",
         "applicationCategory": "LifestyleApplication",
         "offers": {
             "@type": "Offer",
@@ -60,6 +60,8 @@
             scroll-behavior: smooth;
         }
     </style>
+    <!-- 确保规范链接正确 -->
+    <link rel="canonical" href="https://mbtitests.com/love-match/">
 </head>
 <body class="bg-white min-h-screen">
     <!-- Header -->
@@ -601,43 +603,17 @@
                             differences.push(`在决策方式上，一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
                             break;
                         case 3: // J/P
-                            differences.push(`在生活方式上，一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
+                            differences.push(`一方${dimensions[dim1].split('：')[1]}，另一方${dimensions[dim2].split('：')[1]}`);
                             break;
                     }
                 }
             }
 
-            // 添加一些额外的分析
-            if (type1[0] !== type2[0]) { // E/I 不同
-                differences.push('你们的社交能量来源不同，这有助于在社交和独处之间找到平衡');
-            }
-            if (type1[1] === type2[1]) { // S/N 相同
-                similarities.push('你们有相似的思维方式，容易相互理解');
-            }
-            if (type1[2] !== type2[2]) { // T/F 不同
-                differences.push('你们的决策方式互补，可以全面考虑问题的不同方面');
-            }
-            if (type1[3] === type2[3]) { // J/P 相同
-                similarities.push('你们有相似的生活节奏，这有助于减少日常摩擦');
-            }
-
             return {
-                similarities,
-                differences
+                similarities: similarities,
+                differences: differences
             };
         }
     </script>
-    <!-- 在 </body> 标签前添加 Google Analytics -->
-    <div style="display: none;">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFKG3PGVN4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-SFKG3PGVN4');
-    </script>
-    </div>
 </body>
 </html>
