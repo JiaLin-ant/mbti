@@ -1557,10 +1557,103 @@
                     <span>${item}</span>
                 </li>
             `).join('');
+
+            // 显示类型详情容器
+            document.getElementById('typeDetailContainer').classList.remove('hidden');
         }
         
         function closeTypeDetail() {
             document.getElementById('typeDetailContainer').classList.add('hidden');
+        }
+
+        function navigateQuestion(direction) {
+            // 保存当前问题的答案
+            if (direction > 0 && userAnswers[currentQuestion] === null) {
+                return; // 如果用户没有回答当前问题，不能前进
+            }
+            
+            // 计算新的问题索引
+            const newIndex = currentQuestion + direction;
+            
+            // 检查是否超出范围
+            if (newIndex < 0) {
+                return;
+            }
+            
+            // 如果是最后一个问题并且用户点击了"下一步"，则显示结果
+            if (newIndex >= questions.length) {
+                calculateResult();
+                return;
+            }
+            
+            // 更新当前问题索引并显示新问题
+            currentQuestion = newIndex;
+            showQuestion(currentQuestion);
+        }
+
+        function calculateResult() {
+            console.log("Calculating result..."); // 调试日志
+            
+            // 计算每个维度的得分
+            let eScore = 0, iScore = 0, sScore = 0, nScore = 0, tScore = 0, fScore = 0, jScore = 0, pScore = 0;
+            
+            userAnswers.forEach((answer, index) => {
+                if (index >= questions.length || !questions[index]) {
+                    console.warn(`Question at index ${index} not found`);
+                    return;
+                }
+                
+                const dimension = questions[index].dimension;
+                console.log(`Question ${index}, dimension: ${dimension}, answer: ${answer}`); // 调试日志
+                
+                switch(dimension) {
+                    case 'EI':
+                        if (answer === 0) eScore++;
+                        else iScore++;
+                        break;
+                    case 'SN':
+                        if (answer === 0) sScore++;
+                        else nScore++;
+                        break;
+                    case 'TF':
+                        if (answer === 0) tScore++;
+                        else fScore++;
+                        break;
+                    case 'JP':
+                        if (answer === 0) jScore++;
+                        else pScore++;
+                        break;
+                    default:
+                        console.warn(`Unknown dimension: ${dimension}`);
+                }
+            });
+            
+            console.log(`Scores - E:${eScore} I:${iScore} S:${sScore} N:${nScore} T:${tScore} F:${fScore} J:${jScore} P:${pScore}`); // 调试日志
+            
+            // 确定每个维度的结果
+            const e_i = eScore >= iScore ? 'E' : 'I';
+            const s_n = sScore >= nScore ? 'S' : 'N';
+            const t_f = tScore >= fScore ? 'T' : 'F';
+            const j_p = jScore >= pScore ? 'J' : 'P';
+            
+            // 组合成最终的MBTI类型
+            const mbtiType = e_i + s_n + t_f + j_p;
+            console.log(`Final MBTI type: ${mbtiType}`); // 调试日志
+            
+            // 检查类型是否存在
+            if (!mbtiTypes[mbtiType]) {
+                console.error(`MBTI type ${mbtiType} not found in data`);
+                // 使用默认类型
+                showTypeDetail('INTJ');
+                return;
+            }
+            
+            // 关闭测试容器并显示结果
+            closeTest();
+            showTypeDetail(mbtiType);
+            
+            // 显示类型详情容器
+            document.getElementById('typeDetailContainer').classList.remove('hidden');
         }
     </script>
 </body>
