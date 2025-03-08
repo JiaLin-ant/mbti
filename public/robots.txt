@@ -3,6 +3,8 @@
 User-agent: *
 Allow: /
 Allow: /love-match/
+Allow: /chinese/
+
 
 # 不允许爬虫访问的目录（如果有的话）
 # Disallow: /private/
