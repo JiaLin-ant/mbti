@@ -118,7 +118,7 @@
         <div class="w-72 h-72 bg-purple-200" style="left: 20%; bottom: 15%; animation-delay: -10s;"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative">
+    <div class="container mx-auto px-4">
         <!-- 头部区域 -->
         <header class="text-center mb-16">
             <h1 class="text-5xl font-bold mb-6 section-title">INTJ职业推荐</h1>
@@ -127,165 +127,118 @@
             </p>
         </header>
         
-        <!-- MBTI类型导航 -->
-        <div class="max-w-4xl mx-auto mb-16">
-            <div class="bg-white/90 dark:bg-dark-200/90 backdrop-blur p-6 rounded-2xl shadow-lg">
-                <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">选择其他MBTI类型</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <a href="intj.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-center font-medium">INTJ</a>
+        <!-- MBTI导航 -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">探索其他MBTI职业指南</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- E系列 -->
+                <div class="space-y-4">
+                    <a href="entj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENTJ</a>
+                    <a href="entp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENTP</a>
+                    <a href="enfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENFJ</a>
                     <a href="enfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENFP</a>
-                    <a href="istj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISTJ</a>
+                </div>
+                <!-- I系列 -->
+                <div class="space-y-4">
+                    <a href="intj.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-center font-medium">INTJ</a>
+                    <a href="intp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INTP</a>
+                    <a href="infj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INFJ</a>
+                    <a href="infp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INFP</a>
+                </div>
+                <!-- ES系列 -->
+                <div class="space-y-4">
+                    <a href="estj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESTJ</a>
+                    <a href="estp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESTP</a>
+                    <a href="esfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESFJ</a>
                     <a href="esfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESFP</a>
+                </div>
+                <!-- IS系列 -->
+                <div class="space-y-4">
+                    <a href="istj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISTJ</a>
+                    <a href="istp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISTP</a>
+                    <a href="isfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISFJ</a>
+                    <a href="isfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISFP</a>
                 </div>
             </div>
         </div>
         
         <!-- 推荐职业列表 -->
-        <div id="careerList" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- 战略分析师 -->
+            <div class="career-card rounded-2xl p-6 shadow-lg">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">战略分析师</h3>
+                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                        匹配度 95%
+                    </span>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-600 dark:text-gray-300 mb-4">分析市场趋势，制定战略规划</p>
+                
+                <div class="mb-4">
+                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">关键职责：</h4>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>战略规划</li>
+                        <li>数据分析</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- 数据科学家 -->
-            <div class="career-card bg-white dark:bg-dark-200 rounded-lg shadow overflow-hidden">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">数据科学家</h3>
-                        <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                            匹配度 95%
-                        </span>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                            <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">运用数据分析和机器学习技术解决复杂问题</p>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li>强大的分析能力和逻辑思维</li>
-                            <li>独立工作的倾向</li>
-                            <li>对复杂系统的理解能力</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">所需技能：</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                数据分析
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                机器学习
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                统计学
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        <span>薪资范围：25-50万/年</span>
-                        <span>发展前景：未来5年增长率35%</span>
+            <div class="career-card rounded-2xl p-6 shadow-lg">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">数据科学家</h3>
+                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                        匹配度 92%
+                    </span>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- 战略咨询顾问 -->
-            <div class="career-card bg-white dark:bg-dark-200 rounded-lg shadow overflow-hidden">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">战略咨询顾问</h3>
-                        <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                            匹配度 92%
-                        </span>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                            <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">为企业提供战略规划和解决方案</p>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li>出色的战略规划能力</li>
-                            <li>善于发现系统性问题</li>
-                            <li>追求持续改进的动力</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">所需技能：</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                战略分析
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                项目管理
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                商业洞察
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        <span>薪资范围：30-60万/年</span>
-                        <span>发展前景：未来5年增长率25%</span>
-                    </div>
+                
+                <p class="text-gray-600 dark:text-gray-300 mb-4">分析复杂数据，提供决策支持</p>
+                
+                <div class="mb-4">
+                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">关键职责：</h4>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>数据建模</li>
+                        <li>问题解决</li>
+                    </ul>
                 </div>
             </div>
-            
+
             <!-- 系统架构师 -->
-            <div class="career-card bg-white dark:bg-dark-200 rounded-lg shadow overflow-hidden">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">系统架构师</h3>
-                        <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                            匹配度 90%
-                        </span>
+            <div class="career-card rounded-2xl p-6 shadow-lg">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-bold">系统架构师</h3>
+                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                        匹配度 90%
+                    </span>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
                     </div>
-                    
-                    <div class="mb-4">
-                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                            <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">设计和优化大型技术系统架构</p>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                            <li>系统性思维方式</li>
-                            <li>对技术的深入理解</li>
-                            <li>追求完美的特质</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">所需技能：</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                系统设计
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                技术架构
-                            </span>
-                            <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                                问题解决
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        <span>薪资范围：35-70万/年</span>
-                        <span>发展前景：未来5年增长率30%</span>
-                    </div>
+                </div>
+                
+                <p class="text-gray-600 dark:text-gray-300 mb-4">设计技术架构，规划系统方案</p>
+                
+                <div class="mb-4">
+                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">关键职责：</h4>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>架构设计</li>
+                        <li>技术规划</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESFP职业推荐 | 表演者型人格的最佳职业选择</title>
-    <meta name="description" content="为ESFP(表演者)型人格提供的职业推荐。发现最适合你的职业道路，包括活动策划师、销售代表和公关专员等。">
+    <title>INFP职业推荐 | 调停者型人格的最佳职业选择</title>
+    <meta name="description" content="为INFP(调停者)型人格提供的职业推荐。发现最适合你的职业道路，包括作家、心理咨询师和艺术工作者等。">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Tailwind 配置
@@ -58,30 +58,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        .floating-bg {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .floating-bg div {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: float 20s infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            25% { transform: translate(10%, 15%); }
-            50% { transform: translate(-5%, 10%); }
-            75% { transform: translate(8%, -12%); }
-        }
-        
         .section-title {
             background: linear-gradient(90deg, #3b82f6, #60a5fa);
             -webkit-background-clip: text;
@@ -102,30 +78,23 @@
     <button id="themeToggle" class="fixed top-4 right-4 p-2 rounded-full bg-white/90 dark:bg-dark-200 shadow-lg transition-all hover:scale-110">
         <!-- 亮色图标 -->
         <svg class="w-6 h-6 text-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
         </svg>
         <!-- 深色图标 -->
         <svg class="w-6 h-6 text-gray-800 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
         </svg>
     </button>
-
-    <!-- 浮动背景 -->
-    <div class="floating-bg">
-        <div class="w-64 h-64 bg-orange-200" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
-        <div class="w-96 h-96 bg-pink-200" style="right: 15%; top: 10%; animation-delay: -5s;"></div>
-        <div class="w-72 h-72 bg-yellow-200" style="left: 20%; bottom: 15%; animation-delay: -10s;"></div>
-    </div>
-
-    <div class="container mx-auto px-4 relative">
+    
+    <div class="container mx-auto px-4">
         <!-- 头部区域 -->
         <header class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-6 section-title">ESFP职业推荐</h1>
+            <h1 class="text-5xl font-bold mb-6 section-title">INFP职业推荐</h1>
             <p class="text-gray-600 dark:text-gray-400 text-xl max-w-2xl mx-auto">
-                为"表演者"型人格提供的最佳职业选择
+                为"调停者"型人格提供的最佳职业选择
             </p>
         </header>
-        
+
         <!-- MBTI导航 -->
         <div class="mb-12">
             <h2 class="text-2xl font-bold mb-6 text-center">探索其他MBTI职业指南</h2>
@@ -134,7 +103,7 @@
                 <div class="space-y-4">
                     <a href="entj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENTJ</a>
                     <a href="entp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENTP</a>
-                    <a href="enfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 route rounded-lg text-center font-medium">ENFJ</a>
+                    <a href="enfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENFJ</a>
                     <a href="enfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ENFP</a>
                 </div>
                 <!-- I系列 -->
@@ -142,14 +111,14 @@
                     <a href="intj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INTJ</a>
                     <a href="intp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INTP</a>
                     <a href="infj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INFJ</a>
-                    <a href="infp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">INFP</a>
+                    <a href="infp.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-center font-medium">INFP</a>
                 </div>
                 <!-- ES系列 -->
                 <div class="space-y-4">
                     <a href="estj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESTJ</a>
                     <a href="estp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESTP</a>
-                    <a href="esfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 route rounded-lg text-center font-medium">ESFJ</a>
-                    <a href="esfp.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-center font-medium">ESFP</a>
+                    <a href="esfj.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESFJ</a>
+                    <a href="esfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ESFP</a>
                 </div>
                 <!-- IS系列 -->
                 <div class="space-y-4">
@@ -160,120 +129,192 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- 推荐职业列表 -->
-        <div id="careerList" class="grid md:grid-cols-3 gap-8 mb-12">
-            <!-- 活动策划师 -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- 艺术家 -->
             <div class="career-card rounded-2xl p-6 shadow-lg">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">活动策划师</h3>
-                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                        匹配度 95%
-                    </span>
-                </div>
-                
-                <div class="mb-4">
-                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
+                    <h3 class="text-2xl font-bold">艺术家</h3>
+                    <div class="flex items-center">
+                        <span class="text-sm text-gray-600 dark:text-gray-300 mr-2">匹配度</span>
+                        <div class="bg-gray-200 dark:bg-gray-700 h-2 w-24 rounded-full overflow-hidden">
+                            <div class="progress-bar bg-blue-600 h-full rounded-full"></div>
+                        </div>
+                        <span class="ml-2 text-blue-600 font-semibold">95%</span>
                     </div>
                 </div>
                 
-                <p class="text-gray-600 dark:text-gray-300 mb-4">策划和执行各类活动，创造精彩体验</p>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                        <li>出色的社交能力</li>
-                        <li>实用的创意思维</li>
-                        <li>解决问题的灵活性</li>
-                    </ul>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">工作内容</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            创作艺术作品，表达创意理念，探索人性和生活的深层意义。
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>灵活的工作时间</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span>创意表达空间</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">所需技能</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                艺术天赋
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                创意表达
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                审美能力
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- 销售代表 -->
+
+            <!-- 作家 -->
             <div class="career-card rounded-2xl p-6 shadow-lg">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">销售代表</h3>
-                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                        匹配度 92%
-                    </span>
-                </div>
-                
-                <div class="mb-4">
-                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
+                    <h3 class="text-2xl font-bold">作家</h3>
+                    <div class="flex items-center">
+                        <span class="text-sm text-gray-600 dark:text-gray-300 mr-2">匹配度</span>
+                        <div class="bg-gray-200 dark:bg-gray-700 h-2 w-24 rounded-full overflow-hidden">
+                            <div class="progress-bar bg-blue-600 h-full rounded-full"></div>
+                        </div>
+                        <span class="ml-2 text-blue-600 font-semibold">92%</span>
                     </div>
                 </div>
                 
-                <p class="text-gray-600 dark:text-gray-300 mb-4">开发客户资源，达成销售目标</p>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                        <li>天生的沟通能力</li>
-                        <li>积极乐观的态度</li>
-                        <li>对人际互动的热爱</li>
-                    </ul>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">工作内容</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            创作文学作品，表达思想情感，探索人性和生活的深层意义。
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>灵活的工作时间</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span>创意表达空间</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">所需技能</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                写作能力
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                想象力
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                语言表达
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- 旅游顾问 -->
+
+            <!-- 心理辅导员 -->
             <div class="career-card rounded-2xl p-6 shadow-lg">
                 <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">旅游顾问</h3>
-                    <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                        匹配度 90%
-                    </span>
-                </div>
-                
-                <div class="mb-4">
-                    <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                        <div class="progress-bar h-full bg-blue-600" style="width: 0%"></div>
+                    <h3 class="text-2xl font-bold">心理辅导员</h3>
+                    <div class="flex items-center">
+                        <span class="text-sm text-gray-600 dark:text-gray-300 mr-2">匹配度</span>
+                        <div class="bg-gray-200 dark:bg-gray-700 h-2 w-24 rounded-full overflow-hidden">
+                            <div class="progress-bar bg-blue-600 h-full rounded-full"></div>
+                        </div>
+                        <span class="ml-2 text-blue-600 font-semibold">90%</span>
                     </div>
                 </div>
                 
-                <p class="text-gray-600 dark:text-gray-300 mb-4">设计旅游方案，提供专业建议</p>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">为什么适合你：</h4>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
-                        <li>对旅游的热爱</li>
-                        <li>良好的服务意识</li>
-                        <li>沟通能力</li>
-                    </ul>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">工作内容</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            提供心理辅导，帮助他人成长，解决心理问题，促进个人发展。
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>灵活的工作时间</span>
+                            </div>
+                            <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span>创意表达空间</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 text-gray-700 dark:text-gray-200">所需技能</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                同理心
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                倾听能力
+                            </span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                                沟通技巧
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- 工作风格分析 -->
-        <div class="max-w-5xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold mb-8 section-title">ESFP工作风格分析</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+        <!-- 工作风格 -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold mb-8 section-title">工作风格分析</h2>
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="bg-white/90 dark:bg-dark-200/90 backdrop-blur p-8 rounded-2xl shadow-lg">
                     <h3 class="text-xl font-semibold mb-6 text-green-600 flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        适合的工作环境
+                        最适合的工作环境
                     </h3>
                     <ul class="space-y-4">
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            充满活力的团队
+                            富有创意的氛围
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            实践导向的工作
+                            独立工作空间
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            多样化的任务
+                            灵活的工作方式
                         </li>
                     </ul>
                 </div>
@@ -289,19 +330,19 @@
                             <svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
-                            需要长期专注的工作
+                            完成度不足
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
-                            高度理论性的环境
+                            过于理想化
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
-                            孤立的工作方式
+                            自我批评倾向
                         </li>
                     </ul>
                 </div>
@@ -318,21 +359,21 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                   d="M9 5l7 7-7 7"></path>
                         </svg>
-                        提升长期规划能力
+                        培养项目管理能力
                     </li>
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                   d="M9 5l7 7-7 7"></path>
                         </svg>
-                        培养专注和耐心
+                        平衡理想与现实
                     </li>
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                   d="M9 5l7 7-7 7"></path>
                         </svg>
-                        加强数据分析能力
+                        建立自信和韧性
                     </li>
                 </ul>
             </div>

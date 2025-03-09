@@ -99,7 +99,7 @@
                         </a>
                     </div>
                     <div class="flex items-center space-x-8">
-                        <div class="hidden md:flex items-center space-x-8">
+                    <div class="hidden md:flex items-center space-x-8">
                             <a href="/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-blue-600" aria-current="page">
                                 MBTI Test
                             </a>
@@ -146,7 +146,7 @@
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <button id="startTest" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg" aria-label="Start MBTI personality test">
                             Start Test
-                        </button>
+                    </button>
                         <a href="/love-match/en/" id="heroLoveMatchLink" class="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:opacity-90 transition shadow-md hover:shadow-lg inline-flex items-center justify-center" aria-label="Go to love match test">
                             Love Match Test
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -376,48 +376,48 @@
                     <div class="flex justify-between items-center mb-6">
                         <h3 id="type-detail-title" class="text-2xl font-bold text-gray-800"></h3>
                         <button onclick="closeTypeDetail()" class="text-gray-400 hover:text-gray-600 transition" aria-label="Close type details">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
                     <p id="typeSummary" class="text-lg text-gray-600 mb-6"></p>
                     
                     <div class="grid gap-6">
                         <div class="p-6 bg-blue-50 rounded-xl">
                             <h4 class="text-xl font-semibold text-blue-800 mb-4">Characteristics</h4>
                             <ul id="characteristicsList" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            </ul>
-                        </div>
-                        
+                        </ul>
+                    </div>
+                    
                         <div class="p-6 bg-purple-50 rounded-xl">
                             <h4 class="text-xl font-semibold text-purple-800 mb-4">Relationships</h4>
                             <div class="grid md:grid-cols-2 gap-6">
-                                <div>
+                            <div>
                                     <h5 class="font-semibold text-purple-700 mb-3">Strengths:</h5>
                                     <ul id="strengthsList" class="space-y-2">
-                                    </ul>
-                                </div>
-                                <div>
+                                </ul>
+                            </div>
+                            <div>
                                     <h5 class="font-semibold text-purple-700 mb-3">Challenges:</h5>
                                     <ul id="challengesList" class="space-y-2">
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
+                        </div>
                         </div>
                         
                         <div class="p-6 bg-pink-50 rounded-xl">
                             <h4 class="text-xl font-semibold text-pink-800 mb-4">Best Match Types</h4>
                             <div id="bestMatchesList" class="flex flex-wrap gap-2">
-                            </div>
-                        </div>
-                        
+                    </div>
+                </div>
+                
                         <div class="p-6 bg-green-50 rounded-xl">
                             <h4 class="text-xl font-semibold text-green-800 mb-4">Suitable Career Paths</h4>
                             <ul id="careersList" class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             </ul>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -433,7 +433,7 @@
                     <p class="text-gray-600">
                         The Myers-Briggs Type Indicator (MBTI) is a personality assessment tool that helps individuals understand their psychological preferences in how they perceive the world and make decisions.
                     </p>
-                </div>
+                            </div>
                 <div>
                     <h3 class="text-lg font-semibold text-gray-700 mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -447,7 +447,7 @@
                             <a href="/chinese/" class="text-blue-600 hover:text-blue-800 transition">中文版</a>
                         </li>
                     </ul>
-                </div>
+                    </div>
                 <div>
                     <h3 class="text-lg font-semibold text-gray-700 mb-4">Disclaimer</h3>
                     <p class="text-gray-600">
@@ -457,8 +457,8 @@
             </div>
             <div class="mt-8 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
                 <p>&copy; 2024 Psychological Assessment. All rights reserved.</p>
-            </div>
         </div>
+    </div>
     </footer>
 
     <script>
@@ -786,35 +786,35 @@
                 dimension: "JP"
             }
         ];
-        
+
         // MBTI type data
         const mbtiTypes = {
-            'INTJ': {
+                'INTJ': {
                 title: 'Architect',
                 summary: 'Imaginative and strategic thinkers, with a plan for everything.',
-                characteristics: [
+                    characteristics: [
                     'Strategic thinking',
                     'Strong independence',
                     'High standards',
                     'Innovative thinking',
                     'Strong analytical skills'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Loyal and devoted',
                         'Direct and honest',
                         'Knowledgeable',
                         'Seeks growth'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Difficulty expressing emotions',
                         'Perfectionism',
                         'Can appear cold',
                         'Inflexibility'
                     ],
                     bestMatches: ['ENFP', 'ENTP', 'INFP', 'INFJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Strategic analyst',
                     'Scientist',
                     'Engineer',
@@ -823,34 +823,34 @@
                     'Legal advisor',
                     'Investment analyst',
                     'Systems designer'
-                ]
-            },
-            'INTP': {
+                    ]
+                },
+                'INTP': {
                 title: 'Logician',
                 summary: 'Innovative inventors with an unquenchable thirst for knowledge.',
-                characteristics: [
+                    characteristics: [
                     'Analytical thinking',
                     'Objective reasoning',
                     'Abstract concepts',
                     'Intellectual curiosity',
                     'Original ideas'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Open-minded',
                         'Honest and straightforward',
                         'Intellectually stimulating',
                         'Respects independence'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Difficulty with emotional expression',
                         'Can be insensitive',
                         'Overthinking',
                         'Difficulty with commitment'
                     ],
                     bestMatches: ['ENTJ', 'ENFJ', 'ESTJ', 'INFJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Software developer',
                     'Research scientist',
                     'Mathematician',
@@ -859,34 +859,34 @@
                     'Economist',
                     'Philosopher',
                     'Logician'
-                ]
-            },
-            'ENTJ': {
+                    ]
+                },
+                'ENTJ': {
                 title: 'Commander',
                 summary: 'Bold, imaginative and strong-willed leaders, always finding a way – or making one.',
-                characteristics: [
+                    characteristics: [
                     'Natural leadership',
                     'Strategic planning',
                     'Efficiency-focused',
                     'Decisive action',
                     'Self-confidence'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Loyal and committed',
                         'Honest and direct',
                         'Growth-oriented',
                         'Supportive of goals'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be domineering',
                         'Impatient with inefficiency',
                         'Difficulty with emotions',
                         'Workaholic tendencies'
                     ],
                     bestMatches: ['INTP', 'INFP', 'INTJ', 'ENFP']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Executive',
                     'Business consultant',
                     'Lawyer',
@@ -895,34 +895,34 @@
                     'Project manager',
                     'Political leader',
                     'University professor'
-                ]
-            },
-            'ENTP': {
+                    ]
+                },
+                'ENTP': {
                 title: 'Debater',
                 summary: 'Smart and curious thinkers who cannot resist an intellectual challenge.',
-                characteristics: [
+                    characteristics: [
                     'Quick thinking',
                     'Excellent brainstorming',
                     'Loves debate',
                     'Energetic',
                     'Innovative'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Intellectually stimulating',
                         'Spontaneous and fun',
                         'Adaptable',
                         'Open to new ideas'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be argumentative',
                         'Dislikes routine',
                         'May neglect details',
                         'Can be insensitive'
                     ],
                     bestMatches: ['INTJ', 'INFJ', 'INFP', 'ENTJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Entrepreneur',
                     'Lawyer',
                     'Creative director',
@@ -931,34 +931,34 @@
                     'Software developer',
                     'Engineer',
                     'Journalist'
-                ]
-            },
-            'INFJ': {
+                    ]
+                },
+                'INFJ': {
                 title: 'Advocate',
                 summary: 'Quiet and mystical, yet very inspiring and tireless idealists.',
-                characteristics: [
+                    characteristics: [
                     'Deep insight',
                     'Strong convictions',
                     'Creative thinking',
                     'Determined idealism',
                     'Sensitivity to others'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Deep connection',
                         'Supportive and caring',
                         'Insightful guidance',
                         'Committed to growth'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Perfectionism',
                         'Difficulty with criticism',
                         'Can be overly private',
                         'May burn out helping others'
-                    ],
-                    bestMatches: ['ENFP', 'ENTP', 'INTJ', 'INFP']
-                },
-                careers: [
+                        ],
+                        bestMatches: ['ENFP', 'ENTP', 'INTJ', 'INFP']
+                    },
+                    careers: [
                     'Counselor',
                     'Psychologist',
                     'Writer',
@@ -967,34 +967,34 @@
                     'Social worker',
                     'Non-profit director',
                     'Healthcare professional'
-                ]
-            },
-            'INFP': {
+                    ]
+                },
+                'INFP': {
                 title: 'Mediator',
                 summary: 'Poetic, kind and altruistic people, always eager to help a good cause.',
-                characteristics: [
+                    characteristics: [
                     'Idealistic',
                     'Empathetic',
                     'Creative',
                     'Open-minded',
                     'Passionate'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Deeply caring',
                         'Authentic and genuine',
                         'Supportive of growth',
                         'Accepting of differences'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be overly idealistic',
                         'May avoid conflict',
                         'Can be impractical',
                         'Tendency to take things personally'
-                    ],
-                    bestMatches: ['ENFJ', 'ENTJ', 'INFJ', 'INTJ']
-                },
-                careers: [
+                        ],
+                        bestMatches: ['ENFJ', 'ENTJ', 'INFJ', 'INTJ']
+                    },
+                    careers: [
                     'Writer',
                     'Counselor',
                     'Artist',
@@ -1003,34 +1003,34 @@
                     'Social worker',
                     'Librarian',
                     'HR specialist'
-                ]
-            },
-            'ENFJ': {
+                    ]
+                },
+                'ENFJ': {
                 title: 'Protagonist',
                 summary: 'Charismatic and inspiring leaders, able to mesmerize their listeners.',
-                characteristics: [
+                    characteristics: [
                     'Natural leadership',
                     'Charismatic',
                     'Empathetic',
                     'Altruistic',
                     'Reliable'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Warm and affirming',
                         'Deeply committed',
                         'Inspiring and motivating',
                         'Excellent communicators'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be overly idealistic',
                         'May neglect own needs',
                         'Sensitive to criticism',
                         'Can be controlling'
                     ],
                     bestMatches: ['INFP', 'ISFP', 'INTP', 'ISFJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Teacher',
                     'HR director',
                     'Counselor',
@@ -1039,33 +1039,33 @@
                     'Public relations specialist',
                     'Sales manager',
                     'Life coach'
-                ]
-            },
-            'ENFP': {
+                    ]
+                },
+                'ENFP': {
                 title: 'Campaigner',
                 summary: 'Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.',
-                characteristics: [
+                    characteristics: [
                     'Enthusiastic',
                     'Creative',
                     'People-oriented',
                     'Energetic',
                     'Perceptive'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Warm and enthusiastic',
                         'Empathetic and caring',
                         'Fun and spontaneous',
                         'Deeply connected'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be overly emotional',
                         'May struggle with follow-through',
                         'Dislike routine',
                         'Need for external validation'
-                    ],
-                    bestMatches: ['INTJ', 'INFJ', 'ENTJ', 'ENFJ']
-                },
+                        ],
+                        bestMatches: ['INTJ', 'INFJ', 'ENTJ', 'ENFJ']
+                    },
                 careers: [
                     'Journalist',
                     'Actor',
@@ -1088,7 +1088,7 @@
                     'Responsible'
                 ],
                 relationships: {
-                    strengths: [
+                        strengths: [
                         'Loyal and committed',
                         'Honest and direct',
                         'Responsible',
@@ -1101,8 +1101,8 @@
                         'May judge too quickly'
                     ],
                     bestMatches: ['ESFP', 'ESTP', 'ESTJ', 'ENTJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Accountant',
                     'Project manager',
                     'Military officer',
@@ -1116,29 +1116,29 @@
             'ISFJ': {
                 title: 'Defender',
                 summary: 'Very dedicated and warm protectors, always ready to defend their loved ones.',
-                characteristics: [
+                    characteristics: [
                     'Supportive',
                     'Reliable',
                     'Observant',
                     'Patient',
                     'Detail-oriented'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Loyal and committed',
                         'Supportive and nurturing',
                         'Reliable and practical',
                         'Excellent listeners'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can take criticism personally',
                         'Difficulty saying no',
                         'May neglect own needs',
                         'Resistant to change'
-                    ],
-                    bestMatches: ['ESFP', 'ESTP', 'ENFP', 'ENTP']
-                },
-                careers: [
+                        ],
+                        bestMatches: ['ESFP', 'ESTP', 'ENFP', 'ENTP']
+                    },
+                    careers: [
                     'Nurse',
                     'Elementary teacher',
                     'Social worker',
@@ -1147,34 +1147,34 @@
                     'Librarian',
                     'Dietitian',
                     'Interior designer'
-                ]
-            },
-            'ESTJ': {
+                    ]
+                },
+                'ESTJ': {
                 title: 'Executive',
                 summary: 'Excellent administrators, unsurpassed at managing things – or people.',
-                characteristics: [
+                    characteristics: [
                     'Organized',
                     'Practical',
                     'Dependable',
                     'Traditional',
                     'Direct'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Reliable and committed',
                         'Honest and direct',
                         'Strong protectors',
                         'Practical problem solvers'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be inflexible',
                         'May be judgmental',
                         'Can be domineering',
                         'Difficulty with emotions'
                     ],
                     bestMatches: ['ISFP', 'ISTP', 'INTP', 'ISFJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Business manager',
                     'School principal',
                     'Financial officer',
@@ -1183,34 +1183,34 @@
                     'Military officer',
                     'Pharmacist',
                     'Insurance agent'
-                ]
-            },
-            'ESFJ': {
+                    ]
+                },
+                'ESFJ': {
                 title: 'Consul',
                 summary: 'Extraordinarily caring, social and popular people, always eager to help.',
-                characteristics: [
+                    characteristics: [
                     'Supportive',
                     'Reliable',
                     'Conscientious',
                     'Organized',
                     'Harmonious'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Warm and supportive',
                         'Reliable and practical',
                         'Excellent at connecting people',
                         'Committed to relationships'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be needy for approval',
                         'May be inflexible',
                         'Sensitive to criticism',
                         'May neglect own needs'
-                    ],
-                    bestMatches: ['ISFP', 'ISTP', 'INFP', 'INTP']
-                },
-                careers: [
+                        ],
+                        bestMatches: ['ISFP', 'ISTP', 'INFP', 'INTP']
+                    },
+                    careers: [
                     'Healthcare worker',
                     'Teacher',
                     'Social worker',
@@ -1219,34 +1219,34 @@
                     'Human resources specialist',
                     'Office manager',
                     'Customer service manager'
-                ]
-            },
-            'ISTP': {
+                    ]
+                },
+                'ISTP': {
                 title: 'Virtuoso',
                 summary: 'Bold and practical experimenters, masters of all kinds of tools.',
-                characteristics: [
+                    characteristics: [
                     'Adaptable',
                     'Practical',
                     'Logical',
                     'Observant',
                     'Independent'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Calm in crisis',
                         'Independent yet loyal',
                         'Practical problem solver',
                         'Adaptable and flexible'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be emotionally distant',
                         'May avoid commitment',
                         'Can be insensitive',
                         'Dislikes long-term planning'
                     ],
                     bestMatches: ['ESFJ', 'ESTJ', 'ENTJ', 'ENFJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Engineer',
                     'Mechanic',
                     'Pilot',
@@ -1255,34 +1255,34 @@
                     'Electrician',
                     'Paramedic',
                     'Systems analyst'
-                ]
-            },
-            'ISFP': {
+                    ]
+                },
+                'ISFP': {
                 title: 'Adventurer',
                 summary: 'Flexible and charming artists, always ready to explore and experience something new.',
-                characteristics: [
+                    characteristics: [
                     'Artistic',
                     'Sensitive',
                     'Gentle',
                     'Practical',
                     'Present-focused'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Warm and sensitive',
                         'Loyal and committed',
                         'Non-judgmental',
                         'Adaptable'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be overly private',
                         'May avoid conflict',
                         'Can be unpredictable',
                         'Difficulty with long-term planning'
                     ],
                     bestMatches: ['ESFJ', 'ESTJ', 'ENFJ', 'ENTJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Artist',
                     'Designer',
                     'Musician',
@@ -1291,34 +1291,34 @@
                     'Nurse',
                     'Physical therapist',
                     'Fashion designer'
-                ]
-            },
-            'ESTP': {
+                    ]
+                },
+                'ESTP': {
                 title: 'Entrepreneur',
                 summary: 'Smart, energetic and very perceptive people, who truly enjoy living on the edge.',
-                characteristics: [
+                    characteristics: [
                     'Energetic',
                     'Action-oriented',
                     'Adaptable',
                     'Resourceful',
                     'Persuasive'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Fun and spontaneous',
                         'Practical problem solver',
                         'Direct and honest',
                         'Adaptable'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be insensitive',
                         'May take risks',
                         'Difficulty with commitment',
                         'May neglect long-term consequences'
                     ],
                     bestMatches: ['ISFJ', 'ISTJ', 'INFJ', 'INTJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Entrepreneur',
                     'Sales manager',
                     'Athlete',
@@ -1327,34 +1327,34 @@
                     'Marketing specialist',
                     'Real estate agent',
                     'Financial trader'
-                ]
-            },
-            'ESFP': {
+                    ]
+                },
+                'ESFP': {
                 title: 'Entertainer',
                 summary: 'Spontaneous, energetic and enthusiastic people – life is never boring around them.',
-                characteristics: [
+                    characteristics: [
                     'Enthusiastic',
                     'Fun-loving',
                     'Sociable',
                     'Practical',
                     'Present-focused'
-                ],
-                relationships: {
-                    strengths: [
+                    ],
+                    relationships: {
+                        strengths: [
                         'Warm and enthusiastic',
                         'Fun and spontaneous',
                         'Practical helper',
                         'Empathetic'
-                    ],
-                    challenges: [
+                        ],
+                        challenges: [
                         'Can be impulsive',
                         'May avoid serious discussions',
                         'Difficulty with long-term planning',
                         'Sensitive to criticism'
                     ],
                     bestMatches: ['ISFJ', 'ISTJ', 'INFJ', 'INTJ']
-                },
-                careers: [
+                    },
+                    careers: [
                     'Performer',
                     'Public relations specialist',
                     'Event planner',
@@ -1512,33 +1512,33 @@
             // 填充特点列表
             const characteristicsList = document.getElementById('characteristicsList');
             characteristicsList.innerHTML = typeData.characteristics.map(item => `
-                <li class="flex items-start">
+                                    <li class="flex items-start">
                     <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
                     <span>${item}</span>
-                </li>
+                                    </li>
             `).join('');
 
             // 填充关系列表
             const strengthsList = document.getElementById('strengthsList');
             strengthsList.innerHTML = typeData.relationships.strengths.map(item => `
-                <li class="flex items-start">
+                                            <li class="flex items-start">
                     <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+                                                </svg>
                     <span>${item}</span>
-                </li>
+                                            </li>
             `).join('');
 
             const challengesList = document.getElementById('challengesList');
             challengesList.innerHTML = typeData.relationships.challenges.map(item => `
-                <li class="flex items-start">
+                                            <li class="flex items-start">
                     <svg class="h-5 w-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+                                                </svg>
                     <span>${item}</span>
-                </li>
+                                            </li>
             `).join('');
 
             // 填充最佳匹配列表
@@ -1553,8 +1553,8 @@
                 <li class="flex items-start">
                     <svg class="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span>${item}</span>
+                                    </svg>
+                                    <span>${item}</span>
                 </li>
             `).join('');
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,43 +11,34 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线MBTI性格测试，通过40道专业测试题，准确分析你的16型人格类型。了解自己是分析家、外交家、哨兵还是探险家，发现最适合的职业发展方向和恋爱匹配类型。">
-    <meta name="keywords" content="MBTI测试,16型人格测试,性格测试,职业性格测试,MBTI中文测试,免费性格测试,在线心理测试,职业规划,人格分析,性格分析,心理测评,恋爱匹配,性格配对">
-    <title>MBTI性格测试 | 免费在线16型人格测试 | 附恋爱匹配功能</title>
+    <meta name="description" content="专业的MBTI职业性格测试，为16种性格类型提供个性化职业规划和推荐。发现最适合你的职业发展方向，获取详细的职业匹配分析。">
+    <meta name="keywords" content="MBTI职业测试,性格职业匹配,职业规划,职业性向测试,MBTI职业指导,性格类型,职业发展,职业咨询">
+    <title>MBTI职业性格测试 - 16型人格职业匹配指南 | 免费在线测试</title>
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mbtitests.com/">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mbtitests.com/">
-    <meta property="og:title" content="MBTI性格测试 - 免费在线测试分析你的16型人格类型">
-    <meta property="og:description" content="通过专业的MBTI性格测试，了解你的性格特质。免费完成测试，发现最适合的职业发展方向。">
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "MBTI性格测试",
-        "description": "免费在线MBTI性格测试，帮助你了解自己的性格特质和职业发展方向",
+        "@type": "WebSite",
+        "name": "MBTI职业性格测试",
+        "description": "专业的MBTI职业性格测试和职业匹配指南",
         "url": "https://mbtitests.com",
-        "applicationCategory": "PersonalityTest",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY"
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://mbtitests.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
         },
-        "creator": {
-            "@type": "Organization",
-            "name": "心理测评",
-            "url": "https://mbtitests.com"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "1250",
-            "bestRating": "5",
-            "worstRating": "1"
+        "mainEntity": {
+            "@type": "Service",
+            "name": "MBTI职业匹配服务",
+            "description": "基于MBTI性格类型的职业规划和匹配服务",
+            "provider": {
+                "@type": "Organization",
+                "name": "Your Organization Name"
+            }
         }
     }
     </script>
@@ -101,6 +92,42 @@
                             <a href="/chinese/" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-blue-600" aria-current="page">
                                 MBTI测试
                             </a>
+                            <div class="relative group">
+                                <button class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600 flex items-center group-hover:border-blue-600">
+                                    MBTI职业推荐
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
+                                    <div class="py-2 grid grid-cols-2 gap-1">
+                                        <!-- 分析家型 -->
+                                        <div class="col-span-2 px-3 py-2 text-sm font-semibold text-gray-500">分析家型</div>
+                                        <a href="../career/intj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">INTJ</a>
+                                        <a href="../career/intp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">INTP</a>
+                                        <a href="../career/entj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ENTJ</a>
+                                        <a href="../career/entp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ENTP</a>
+                                        <!-- 外交家型 -->
+                                        <div class="col-span-2 px-3 py-2 text-sm font-semibold text-gray-500">外交家型</div>
+                                        <a href="../career/infj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">INFJ</a>
+                                        <a href="../career/infp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">INFP</a>
+                                        <a href="../career/enfj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ENFJ</a>
+                                        <a href="../career/enfp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ENFP</a>
+                                        <!-- 哨兵型 -->
+                                        <div class="col-span-2 px-3 py-2 text-sm font-semibold text-gray-500">哨兵型</div>
+                                        <a href="../career/istj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ISTJ</a>
+                                        <a href="../career/isfj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ISFJ</a>
+                                        <a href="../career/estj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ESTJ</a>
+                                        <a href="../career/esfj.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ESFJ</a>
+                                        <!-- 探险家型 -->
+                                        <div class="col-span-2 px-3 py-2 text-sm font-semibold text-gray-500">探险家型</div>
+                                        <a href="../career/istp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ISTP</a>
+                                        <a href="../career/isfp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ISFP</a>
+                                        <a href="../career/estp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ESTP</a>
+                                        <a href="../career/esfp.html" class="px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">ESFP</a>
+                                    </div>
+                                </div>
+                            </div>
                             <a href="/love-match/" id="navLoveMatchLink" class="text-gray-600 hover:text-blue-600 font-medium transition border-b-2 border-transparent hover:border-blue-600">
                                 恋爱匹配
                             </a>
