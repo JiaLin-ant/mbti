@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESFP职业推荐 | 表演者型人格的最佳职业选择</title>
-    <meta name="description" content="为ESFP(表演者)型人格提供的职业推荐。发现最适合你的职业道路，包括活动策划师、销售代表和公关专员等。">
+    <title>ESFP职业推荐 | 表演者型人格最佳工作选择</title>
+    <meta name="description" content="探索ESFP性格类型的最佳职业选择。发现适合表演者型人格的理想工作，如销售代表、活动策划师和公关顾问。">
+    <link rel="canonical" href="https://mbtitests.com/career/esfp.html">
+    <meta name="keywords" content="ESFP职业, ESFP工作, 职业推荐, 销售代表, 活动策划师, 公关顾问, 表演者型人格">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Tailwind 配置
@@ -119,15 +121,15 @@
 
     <div class="container mx-auto px-4 relative">
         <!-- 头部区域 -->
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-6 section-title">ESFP职业推荐</h1>
-            <p class="text-gray-600 dark:text-gray-400 text-xl max-w-2xl mx-auto">
-                为"表演者"型人格提供的最佳职业选择
+        <header class="text-center mb-12" role="banner">
+            <h1 class="text-4xl font-bold mb-4 section-title">ESFP职业指南</h1>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" role="doc-subtitle">
+                活力四射且富有表现力的ESFP，擅长在需要与人互动和发挥创意的岗位中展现才华。
             </p>
         </header>
         
         <!-- MBTI导航 -->
-        <div class="mb-12">
+        <nav class="mb-12" role="navigation" aria-label="MBTI类型导航">
             <h2 class="text-2xl font-bold mb-6 text-center">探索其他MBTI职业指南</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <!-- E系列 -->
@@ -159,10 +161,11 @@
                     <a href="isfp.html" class="px-4 py-2 bg-white dark:bg-dark-300 text-gray-800 dark:text-gray-200 rounded-lg text-center font-medium hover:bg-gray-100 dark:hover:bg-dark-200 transition-colors">ISFP</a>
                 </div>
             </div>
-        </div>
+        </nav>
         
         <!-- 推荐职业列表 -->
-        <div id="careerList" class="grid md:grid-cols-3 gap-8 mb-12">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16" aria-labelledby="career-options">
+            <h2 id="career-options" class="sr-only">ESFP的职业选择</h2>
             <!-- 活动策划师 -->
             <div class="career-card rounded-2xl p-6 shadow-lg">
                 <div class="flex justify-between items-start mb-4">
@@ -243,7 +246,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
         
         <!-- 工作风格分析 -->
         <div class="max-w-5xl mx-auto mb-16">
@@ -309,8 +312,8 @@
         </div>
         
         <!-- 发展建议 -->
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 section-title">职业发展建议</h2>
+        <section class="max-w-4xl mx-auto" aria-labelledby="development-tips">
+            <h2 id="development-tips" class="text-3xl font-bold mb-8 section-title">职业发展建议</h2>
             <div class="bg-white/90 dark:bg-dark-200/90 backdrop-blur p-8 rounded-2xl shadow-lg">
                 <ul class="space-y-6">
                     <li class="flex items-start">
@@ -336,7 +339,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
     </div>
 
     <script>
