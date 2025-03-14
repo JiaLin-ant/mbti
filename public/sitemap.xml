@@ -139,4 +139,112 @@
  <changefreq>monthly</changefreq>
 </url>
 
+<!-- add english version of career pages -->
+
+<url>
+ <loc>https://mbtitests.com/career/en/intj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/intp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/career/en/infj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/infp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/istj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/istp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/isfj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/isfp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/estp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/esfp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/career/en/estj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/career/en/esfj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+<url>
+ <loc>https://mbtitests.com/career/en/entj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/entp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/enfj.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
+
+
+<url>
+ <loc>https://mbtitests.com/career/en/enfp.html</loc>
+ <priority>0.8</priority>
+ <changefreq>monthly</changefreq>
+</url>
 </urlset>
